@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario - Colegio Enrique Paillardelle</title>
+  <!-- Mantenemos la relación de estilos de login para reutilizar el diseño de tarjetas -->
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/paginaweb.css">
+  <link rel="icon" type="image/png" href="img/logo_enriquepaillardelle.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Contenedor donde se cargará el encabezado dinámicamente -->
+  <div id="header-container"></div>
+
+  <main class="contenedor-login-seccion">
+    <div class="login-wrapper">
+
+      <h1 class="titulo-colegio">Colegio Enrique Paillardelle</h1>
+
+      <div class="tarjeta-login">
+        <h2>REGÍSTRATE</h2>
+        <p class="subtitulo">Crea tu cuenta para acceder a la plataforma</p>
+
+        <form id="form-registro">
+
+          <!-- Campo Nombre Completo -->
+          <div class="grupo-campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="name" placeholder="Ingresa tu nombre y apellidos" required>
+          </div>
+
+          <!-- Campo Correo Electrónico -->
+          <div class="grupo-campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="email" placeholder="Ingresa tu correo electrónico" required>
+          </div>
+
+          <!-- Campo Contraseña -->
+          <div class="grupo-campo">
+            <label for="pass">Contraseña</label>
+            <input type="password" id="pass" name="password" placeholder="Crea una contraseña segura" required>
+          </div>
+
+          <!-- Campo Confirmar Contraseña (Requerido para validaciones seguras) -->
+          <div class="grupo-campo">
+            <label for="pass-confirm">Confirmar contraseña</label>
+            <input type="password" id="pass-confirm" name="password_confirmation" placeholder="Repite tu contraseña"
+              required>
+          </div>
+
+          <button type="submit" class="btn-ingresar">Registrarse</button>
+        </form>
+
+        <a href="login.html" class="registro-link">¿Ya tienes una cuenta? <span>Inicia sesión</span></a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="footer-container"></footer>
+
+  <!-- Cargamos primero el script que renderiza el Header para asegurar su visibilidad -->
+  <script src="script.js/header.js"></script>
+  <script src="script.js/registro.js"></script>
+  <!-- SweetAlert2 CSS y JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="script.js/footer.js"></script>
+</body>
+
+</html>

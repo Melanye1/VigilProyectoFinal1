@@ -1,0 +1,358 @@
+/* --- CONFIGURACIÓN GENERAL DEL MÓDULO --- */
+body {
+  background-color: #f8f9fa;
+}
+
+.contenedor-modulo-noticias {
+  max-width: 1200px;
+  /* Usamos un margen superior negativo para contrarrestar cualquier espacio oculto del header */
+  margin: -20px auto 40px auto; 
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* --- CONFIGURACIÓN GENERAL DEL MÓDULO --- */
+body {
+  background-color: #f8f9fa;
+}
+
+.contenedor-modulo-noticias {
+  max-width: 1200px;
+  /* Cambiamos el margen negativo por 40px arriba para que baje y se limpie del menú azul */
+  margin: 40px auto 40px auto; 
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* --- TÍTULO PRINCIPAL DE LA SECCIÓN (COMPACTO Y VISIBLE) --- */
+.encabezado-noticias-titulo {
+  text-align: center;
+  padding-top: 0px;    
+  margin-top: 0px;     
+  margin-bottom: 10px; /* Mantenemos esto corto para que la noticia esté cerca del texto */
+}
+
+.encabezado-noticias-titulo h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #003366;
+  margin-top: 0px;    
+  margin-bottom: 0px; 
+}
+
+.linea-decorativa-amarilla-centrada {
+  width: 100px;
+  height: 4px;
+  background-color: #FFD23B;
+  margin: 5px auto 8px auto; 
+}
+
+.encabezado-noticias-titulo p {
+  font-size: 15px;
+  color: #666666;
+  margin: 0px auto; 
+  padding: 0px;
+}
+
+/* --- ESTILOS DE LA NOTICIA DESTACADA --- */
+.seccion-noticia-destacada {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-top: -15px; /* Le damos una ligera separación al texto de arriba */
+  margin-bottom: 35px;
+}
+
+.fila-destacada {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columna-imagen-destacada {
+  flex: 1.1;
+  min-width: 300px;
+}
+
+.columna-imagen-destacada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.columna-info-destacada {
+  flex: 0.9;
+  /* CAMBIO: Bajamos el padding superior de 25px a solo 12px para que la FECHA suba de golpe */
+  padding: 12px 30px 25px 30px; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Cabecera interna: Bloque de fecha e insignia */
+.contenedor-cabecera-destacada {
+  display: flex;
+  align-items: center; 
+  gap: 15px;
+  /* CAMBIO: Reducimos este margen para que el TÍTULO se pegue más a la fecha */
+  margin-bottom: 5px; 
+}
+
+.bloque-fecha {
+  background-color: #004085;
+  color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.1;
+  min-width: 60px;
+}
+
+.bloque-fecha .dia {
+  font-size: 24px;
+  font-weight: 900;
+  display: block;
+}
+
+.bloque-fecha .mes-anio {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.etiqueta-destacada {
+  background-color: #FFD23B;
+  color: #003366;
+  padding: 5px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.columna-info-destacada h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #003366;
+  font-weight: 700;
+  /* CAMBIO: Reducimos el espacio debajo del título para que los párrafos también suban */
+  margin-bottom: 10px; 
+  line-height: 1.3;
+}
+
+.columna-info-destacada p {
+  color: #555555;
+  font-size: 14.5px;
+  line-height: 1.5;
+  margin-bottom: 10px; /* Reducido de 15px a 10px */
+  text-align: justify;
+}
+
+.btn-leer-noticia-completa {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #003366;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 10px 22px; /* Un poco más estilizado y compacto */
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Reducido de 15px a 10px */
+}
+
+.btn-leer-noticia-completa:hover {
+  background-color: #002244;
+}
+
+/* --- ESTILOS DE NOTICIAS RECIENTES (GRID) --- */
+.titulo-recientes {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 20px; /* Reducido de 25px a 20px */
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Un poco más de espacio al ícono de Bootstrap */
+}
+
+.titulo-recientes .bi-calendar {
+  color: #003366; 
+  font-size: 22px;
+}
+
+.grid-noticias-recientes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.tarjeta-noticia-reciente {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-noticia-reciente:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.imagen-tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.cuerpo-tarjeta {
+  padding: 22px; /* Ligeramente más compacto */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.fecha-noticia {
+  font-size: 12px;
+  color: #888888;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.cuerpo-tarjeta h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px; /* Reajustado de 18px */
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.cuerpo-tarjeta p {
+  font-size: 13.5px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.enlace-leer-mas {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: auto; 
+  display: inline-block;
+}
+
+.enlace-leer-mas:hover {
+  text-decoration: underline;
+}
+
+/* --- SECCIÓN RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 992px) {
+  .grid-noticias-recientes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .fila-destacada {
+    flex-direction: column;
+  }
+  .grid-noticias-recientes {
+    grid-template-columns: 1fr;
+  }
+  .columna-info-destacada {
+    padding: 25px;
+  }
+  /* --- ENUMERADOR TOTALMENTE CENTRADO --- */
+.contenedor-paginacion {
+    display: flex;
+    justify-content: center; /* Alinea los botones al centro exacto del contenedor */
+    align-items: center;
+    gap: 10px;
+    margin: 40px auto 40px auto;
+    width: 100%;
+}
+
+.btn-pagina {
+    background: #ffffff;
+    color: #333333;
+    border: 1px solid #e0e0e0;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.btn-pagina:hover:not(:disabled) {
+    background-color: #003366;
+    color: #ffffff;
+    border-color: #003366;
+}
+
+.btn-pagina.activo {
+    background-color: #003366;
+    color: #ffffff;
+    border-color: #003366;
+    font-weight: 900;
+}
+
+.btn-pagina:disabled {
+    background-color: #f8f9fa;
+    color: #ced4da;
+    border-color: #e9ecef;
+    cursor: not-allowed;
+}
+/* --- ENUMERADOR COMPLETAMENTE CENTRADO --- */
+.contenedor-paginacion {
+    display: flex !important;
+    justify-content: center !important; /* Centra los botones internamente */
+    align-items: center !important;
+    gap: 8px;
+    
+    /* 🚀 LA SOLUCIÓN DEFINITIVA: */
+    margin: 50px auto 40px auto !important; /* El 'auto' a la izquierda y derecha equilibra los espacios y lo manda al centro exacto */
+    width: max-content !important;          /* Hace que la caja mida solo lo que miden los botones, impidiendo que se estire a la izquierda */
+}
+
+/* Contenedor que obliga al elemento hijo a alinearse al centro */
+.contenedor-numerador-centro {
+    display: flex;
+    justify-content: center; /* Centrado horizontal absoluto */
+    align-items: center;
+    margin-bottom: 12px;    /* Espacio inferior antes de la fecha */
+    margin-top: 5px;
+}
+
+/* Diseño estilizado del numerador (Badge) */
+.numerador-badge {
+    background-color: #ffcc00; /* Amarillo institucional Paillardelle */
+    color: #1a1a1a;            /* Texto oscuro para alto contraste */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;          /* Negrita */
+    font-size: 0.75rem;        /* Tamaño sutil y profesional */
+    letter-spacing: 1px;       /* Espaciado de letras moderno */
+    text-transform: uppercase; /* Todo en mayúsculas */
+    padding: 6px 16px;         /* Espaciado interno para darle forma de pastilla */
+    border-radius: 20px;       /* Bordes completamente redondeados */
+    box-shadow: 0 2px 8px rgba(255, 204, 0, 0.3); /* Destello suave alrededor */
+    display: inline-block;
+}
+}

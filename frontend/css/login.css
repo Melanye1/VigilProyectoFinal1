@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+/* --- ESTILOS GENERALES --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: clip;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- SECCIÓN PRINCIPAL DE LOGIN (HERO FLOTANTE) --- */
+.contenedor-login-seccion {
+ flex: 1;
+  position: relative;
+  width: 100%;
+  
+  /* AQUÍ ESTÁ EL TRUCO: Capa de degradado + Imagen de fondo */
+  background: linear-gradient(
+    to right, 
+    rgba(0, 83, 156, 1) 0%,     /* Azul sólido al inicio (0%) */
+    rgba(0, 83, 156, 0.9) 35%,   /* Se mantiene bastante opaco sobre el login */
+    rgba(0, 83, 156, 0.4) 70%,   /* Empieza a transparentarse en el medio */
+    rgba(0, 83, 156, 0.1) 100%   /* Muy transparente al final para ver a los alumnos */
+  ), 
+  url('../img/login/login_alumnos.png');  /* Tu foto va aquí */
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+}
+
+/* Contenedor wrapper interno */
+.login-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Título de la escuela en letras blancas grandes arriba del recuadro */
+.titulo-colegio {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 35px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Tarjeta contenedora blanca del formulario */
+.tarjeta-login {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta-login h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #003366;
+  text-align: left;
+  font-size: 22px;
+  margin: 0 0 5px 0;
+}
+
+.tarjeta-login .subtitulo {
+  color: #555;
+  font-size: 14px;
+  margin: 0 0 30px 0;
+}
+
+.grupo-campo {
+  margin-bottom: 20px;
+}
+
+.grupo-campo label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.grupo-campo input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #a0a6ab;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+
+.grupo-campo input:focus {
+  border-color: #0078C9;
+}
+
+/* Enlace recuperar contraseña */
+.olvido-pass {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #00539C;
+  text-decoration: none;
+  margin: 15px 0 25px 0;
+}
+
+.olvido-pass:hover {
+  text-decoration: underline;
+}
+
+/* Botón Ingresar */
+.btn-ingresar {
+  width: 100%;
+  background-color: #FCD86E; /* Amarillo plano idéntico a la foto */
+  color: #003366;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-ingresar:hover {
+  background-color: #f3cc58;
+}
+
+/* Enlace inferior de Registro */
+.registro-link {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #444;
+  text-decoration: none;
+}
+
+.registro-link span {
+  color: #00539C;
+  font-weight: 600;
+}
+
+
+/* --- PIE DE PÁGINA (FOOTER) REESTRUCTURADO --- */
+footer {
+  background: linear-gradient(90deg, #003366, #0078C9, #66CCFF);
+  color: white;
+  padding: 40px 40px 10px 40px;
+  width: 100%;
+  margin-top: auto; /* Empuja el footer siempre abajo si hay poco contenido */
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 180px; /* Distribución dinámica horizontal */
+}
+
+/* Columna especial del Logo */
+.footer-logo-col {
+  flex: 1 1 220px;
+}
+
+.footer-logo img {
+  height: 70px;
+  margin-bottom: 5px;
+}
+
+.copyright-text-sub {
+  font-size: 10px; 
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0 0 15px 0;
+}
+
+/* Enlace a Facebook con ícono integrado */
+.fb-link {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espacio ideal entre el ícono y el texto */
+  transition: color 0.3s ease;
+}
+
+.fb-link i {
+  font-size: 18px; /* Tamaño destacado para el logo de Facebook */
+}
+
+.fb-link:hover {
+  color: #FFD23B; /* Cambia a amarillo al pasar el mouse */
+}
+
+/* Títulos amarillos del Footer */
+.footer-title {
+  color: #ffffff !important;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+/* Enlaces del Footer */
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px !important;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD23B;
+}
+
+/* ⚡ AQUÍ ESTÁ LA SOLUCIÓN GLOBAL PARA HOMOGENEIZAR LOS TAMAÑOS ⚡ */
+.footer-column p, 
+.footer-column span, 
+.footer-column font,
+.footer-column strong {
+  font-size: 13px !important; /* Fuerza a 13px a TODO lo que sea texto en las columnas */
+  line-height: 1.5 !important;
+  color: white !important;
+}
+
+/* Para mantener las etiquetas en negrita legibles pero del mismo tamaño */
+.footer-column strong {
+  font-weight: 600 !important;
+}
+
+.phone-number {
+  font-size: 13px !important;
+}
+
+.email-title {
+  color: #FFD23B;
+  font-size: 13px !important;
+  margin: 15px 0 5px 0;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+.email-text {
+  font-size: 13px !important;
+}
+
+/* Caja de Mapa Ajustada */
+.footer-map iframe {
+  width: 100%;
+  max-width: 280px; /* Incrementado para que se aprecie mejor el plano */
+  height: 140px;    /* Un poco más alto para dar aire al mapa */
+  border-radius: 6px;
+  background-color: #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Barra inferior de copyright (Línea sutil divisoria) */
+.footer-bottom-bar {
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Línea blanca semitransparente como en tu diseño */
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom-bar p {
+  font-size: 11px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,165 @@
+/* --- CONFIGURACIÓN MÓDULO DE USUARIOS --- */
+
+/* Título de módulo en la cabecera interna */
+.modulo-titulo-principal {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #003366;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tarjeta contenedora de la lista del Figma */
+.modulo-usuarios-card {
+  background-color: #ffffff;
+  border: 1px solid #a3c1ad; /* Borde sutil del figma */
+  border-radius: 4px;
+  padding: 35px;
+}
+
+/* Distribución del título y el botón superior derecho */
+.usuarios-header-acciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Botón Crear Nuevo Usuario estilo Figma */
+.btn-crear-usuario {
+  background-color: #0056b3;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 18px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-crear-usuario:hover {
+  background-color: #004085;
+  transform: scale(1.02);
+}
+
+.btn-crear-usuario span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Estructura de filas */
+.usuarios-lista-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.usuario-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Cajas de texto indexadas */
+.usuario-texto-box {
+  flex: 1;
+  border: 1px solid #003366;
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #334e68;
+  background-color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Contenedor de iconos de acción */
+.usuario-acciones {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-accion-icon {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.btn-accion-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Colores exactos del Figma conservados */
+.btn-accion-icon.azul-claro { color: #2292a4; }
+.btn-accion-icon.azul-oscuro { color: #0f4c81; }
+.btn-accion-icon.azul-medio { color: #1f7a8c; }
+.btn-accion-icon.celeste { color: #4da1a9; }
+
+/* Paginación */
+.paginacion-usuarios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page-num {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #0056b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.page-num.active, .page-num:hover {
+  background-color: #b3d1ff;
+  color: #000000;
+}
+
+.page-dots {
+  display: flex;
+  gap: 3px;
+  color: #0056b3;
+  font-size: 8px;
+  align-items: center;
+  margin-left: 5px;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+  .usuarios-header-acciones {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .usuario-item-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .usuario-acciones {
+    justify-content: flex-end;
+  }
+}

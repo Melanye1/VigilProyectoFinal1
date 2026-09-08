@@ -1,0 +1,220 @@
+/* --- CONFIGURACIÓN MÓDULO DE COMUNICADOS --- */
+
+/* Título de módulo superior fuera de la tarjeta */
+.modulo-titulo-principal {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0056b3;
+  text-transform: uppercase;
+}
+
+/* Tarjeta contenedora de lista */
+.modulo-comunicados-card {
+  background-color: #ffffff;
+  border: 1px solid #a3c1ad; /* Borde sutil gris azulado del Figma */
+  border-radius: 4px;
+  padding: 30px;
+}
+
+/* Tarjeta inferior del formulario */
+.modulo-comunicados-card-form {
+  background-color: #ffffff;
+  border: 2px solid #0078C9;
+  border-radius: 4px;
+  padding: 25px;
+}
+
+/* Lista de comunicados */
+.comunicados-lista-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-x: auto;
+}
+
+.comunicado-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Cajas de texto indexadas */
+.comunicado-texto-box {
+  flex: 1;
+  border: 1px solid #003366;
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #334e68;
+  background-color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Contenedor de iconos de acción */
+.comunicado-acciones {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-accion-icon {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 2px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.btn-accion-icon:hover {
+  transform: scale(1.15);
+}
+
+/* Mapeo exacto de los colores del Figma */
+.btn-accion-icon.azul-claro { color: #2292a4; }
+.btn-accion-icon.azul-oscuro { color: #0f4c81; }
+.btn-accion-icon.azul-medio { color: #1f7a8c; }
+.btn-accion-icon.celeste { color: #4da1a9; }
+
+/* Paginación */
+.paginacion-comunicados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page-num {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #0056b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #000000;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.page-num.active, .page-num:hover {
+  background-color: #b3d1ff;
+  color: #000000;
+}
+
+.page-dots {
+  display: flex;
+  gap: 3px;
+  color: #0056b3;
+  font-size: 8px;
+  align-items: center;
+  margin-left: 5px;
+}
+
+/* Subtítulos e Inputs (Homologados con Noticias y Figma) */
+.subtitulo-comunicados-dash {
+  font-size: 15px;
+  color: #0078C9;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.linea-decorativa-amarilla-izquierda.short {
+  width: 45px;
+  height: 3px;
+  background-color: #ffcc00;
+  margin-top: 5px;
+}
+
+.form-label-dash {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px;
+  color: #0078C9;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Cuerpo del comunicado con tipografía mixta del Figma */
+.form-label-body-dash {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #333333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-input-dash {
+  border: 1px solid #003366 !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.form-textarea-dash {
+  border: 1px solid #003366 !important;
+  border-radius: 4px !important;
+  padding: 12px 15px !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  resize: none;
+}
+
+/* Botón Guardar Comunicado */
+.btn-guardar-comunicado {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-guardar-comunicado:hover {
+  transform: scale(1.05);
+}
+
+.btn-guardar-icon {
+  font-size: 38px;
+  color: #0078C9;
+  line-height: 1;
+}
+
+.btn-guardar-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #555555;
+  margin-top: 8px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+  .comunicado-item-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .comunicado-acciones {
+    justify-content: flex-end;
+  }
+  .btn-guardar-comunicado {
+    margin-top: 20px;
+  }
+}

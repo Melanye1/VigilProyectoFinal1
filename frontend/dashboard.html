@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Panel Administrativo - Colegio Enrique Paillardelle</title>
+
+  <script src="AuthGuard.js"></script>
+
+  <link rel="stylesheet" href="css/paginaweb.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+
+  <link rel="icon" type="image/png" href="img/logo_enriquepaillardelle.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+</head>
+
+<body>
+
+  <div class="wrapper-dashboard">
+
+    <aside class="sidebar-dash">
+
+      <div class="sidebar-brand-dash">
+        <img src="img/logo_enriquepaillardelle.png" alt="Logo Colegio Enrique Paillardelle">
+      </div>
+
+      <ul class="sidebar-menu-dash">
+
+        <li>
+          <a href="#" class="active">
+            Panel Principal
+          </a>
+        </li>
+
+        <li>
+          <a href="noticias_dashboard.html">
+            Noticias
+          </a>
+        </li>
+        <li>
+          <a href="galeria_dashboard.html">Galería</a>
+        </li>
+
+        <li>
+          <a href="contacto_formulario_dashboard.html">
+            Formulario de contacto
+          </a>
+        </li>
+
+        <li>
+          <a href="comunicados_dashboard.html">
+            Comunicados
+          </a>
+        </li>
+
+        <li>
+          <a href="comentarios_dashboard.html">
+            Comentarios
+          </a>
+        </li>
+
+        <li>
+          <a href="usuarios_dashboard.html">
+            Usuarios
+          </a>
+        </li>
+
+        <li>
+          <a href="dashboard_configuracion.html">
+            Configuración
+          </a>
+        </li>
+
+      </ul>
+
+    </aside>
+
+    <div class="main-content-dash">
+
+      <header class="header-dash">
+
+        <h1 class="m-0">
+          I.E. ENRIQUE PAILLARDELLE - PANEL DE ADMINISTRACIÓN
+        </h1>
+
+        <div class="user-profile-dash menu-usuario-wrapper">
+
+          <button type="button" class="btn-menu-usuario" id="btnMenuUsuario" aria-label="Abrir menú de usuario"
+            aria-expanded="false">
+
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150"
+              alt="Foto del administrador" class="avatar-dash avatar-dashboard-global">
+
+            <span class="menu-burger-icon">
+              <i class="bi bi-list"></i>
+            </span>
+
+          </button>
+
+          <div class="menu-desplegable-usuario" id="menuUsuario">
+
+            <a href="perfil_dashboard.html" class="menu-usuario-item">
+              <i class="bi bi-person-circle"></i>
+              <span>Perfil</span>
+            </a>
+
+            <a href="dashboard_configuracion.html" class="menu-usuario-item">
+              <i class="bi bi-gear"></i>
+              <span>Configuración</span>
+            </a>
+
+          <button type="button" class="menu-usuario-item salir" id="btnSalirGlobal">
+    <i class="bi bi-box-arrow-right"></i>
+    <span>Salir</span>
+</button>
+
+          </div>
+
+        </div>
+
+      </header>
+
+      <main class="dashboard-container-dash">
+<div id="checkout-placeholder"></div>
+        <div class="titulo-seccion-dash mb-4">
+          <h2>Métricas Generales</h2>
+          <div class="linea-decorativa-amarilla-izquierda"></div>
+        </div>
+
+        <div class="metrics-grid-dash">
+
+          <div class="card-dash c-blue">
+            <div class="card-title-dash">
+              Usuarios Registrados
+            </div>
+
+            <div class="card-value-dash">
+              8
+            </div>
+          </div>
+
+          <div class="card-dash c-blue-light">
+            <div class="card-title-dash">
+              Archivos Multimedia
+            </div>
+
+            <div class="card-value-dash">
+              60
+            </div>
+          </div>
+
+          <div class="card-dash c-gold">
+            <div class="card-title-dash">
+              Almacenamiento Restante
+            </div>
+
+            <div class="card-value-dash">
+              800 MB / 2.00 GB
+            </div>
+          </div>
+
+          <div class="card-dash c-blue-dark">
+            <div class="card-title-dash">
+              Comentarios del Mes
+            </div>
+
+            <div class="card-value-dash">
+              15
+            </div>
+          </div>
+
+          <div class="card-dash c-blue-navy">
+            <div class="card-title-dash">
+              Entrega de libretas
+            </div>
+
+            <div class="card-value-dash">
+              faltan 20 días
+            </div>
+          </div>
+
+          <div class="card-dash c-blue-gradient">
+            <div class="card-title-dash">
+              Últimos comunicados publicados
+            </div>
+
+            <div class="card-value-dash">
+              3
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chart-section-dash mt-5">
+
+          <div class="titulo-seccion-dash mb-4">
+            <h2>Visitas al Sitio Web (Historial)</h2>
+            <div class="linea-decorativa-amarilla-izquierda"></div>
+          </div>
+
+          <div class="chart-wrapper-dash">
+
+            <div class="chart-bars-container">
+
+              <div class="bar-block-dash">
+                <div class="bar-dash" style="height: 40px; background-color: #0078C9;"></div>
+
+                <span class="bar-label-dash">
+                  Ene
+                </span>
+              </div>
+
+              <div class="bar-block-dash">
+                <div class="bar-dash" style="height: 90px; background-color: #66CCFF;"></div>
+
+                <span class="bar-label-dash">
+                  Feb
+                </span>
+              </div>
+
+              <div class="bar-block-dash">
+                <div class="bar-dash" style="height: 160px; background-color: #FFD23B;"></div>
+
+                <span class="bar-label-dash">
+                  Mar
+                </span>
+              </div>
+
+              <div class="bar-block-dash">
+                <div class="bar-dash" style="height: 210px; background-color: #003366;"></div>
+
+                <span class="bar-label-dash">
+                  Abr
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+  <script src="script.js/dashboard/Menu_usuario.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

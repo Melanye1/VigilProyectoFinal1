@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegio Enrique Paillardelle - Comunicados</title>
+  <link rel="stylesheet" href="css/paginaweb.css">
+  <link rel="stylesheet" href="css/comunicados.css">
+  <link rel="icon" type="image/png" href="img/logo_enriquepaillardelle.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+
+  <!-- ==========================================================================
+       PANEL DE COMUNICADOS
+       ========================================================================== -->
+  <main class="seccion-comunicados-panel">
+    <div class="contenedor-comunicados container py-4">
+
+      <!-- Encabezado de la Sección con el nuevo estilo idéntico a Noticias -->
+      <div class="header-comunicados-titulo text-center mb-4">
+        <div class="icono-megafono-comunicados">
+          <i class="fa-solid fa-bullhorn"></i>
+        </div>
+        <h2 class="titulo-seccion-premium">COMUNICADOS</h2>
+        <div class="linea-decorativa-amarilla-centrada"></div>
+        <p class="subtitulo-seccion-premium">Avisos oficiales de la institución</p>
+      </div>
+
+      <!-- Barra de Búsqueda -->
+      <div class="barra-busqueda-comunicados mb-4">
+        <div class="input-grupo-busqueda mx-auto" style="max-width: 500px;">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="buscarComunicado" class="form-control" placeholder="Buscar comunicado...">
+        </div>
+      </div>
+
+      <!-- Tabla / Lista de Comunicados -->
+      <div class="tabla-comunicados-contenedor shadow-sm rounded bg-white p-3">
+        <!-- Fila de Encabezado de Tabla (Oculta en móviles para mejorar legibilidad) -->
+        <div class="fila-comunicados-header row g-2 py-2 d-none d-md-flex fw-bold border-bottom">
+          <div class="col-md-6">COMUNICADO</div>
+          <div class="col-md-3">FECHA</div>
+          <div class="col-md-3 text-center">ACCIONES</div>
+        </div>
+
+      <!-- Cuerpo del Repositorio PDF (Dinámico vía API) -->
+<div class="cuerpo-tabla-comunicados" id="contenedor-comunicados-api">
+  <!-- Los comunicados cargados desde Laravel se insertarán aquí automáticamente -->
+  <div class="text-center py-5" id="loader">
+    <div class="spinner-border text-danger" role="status">
+      <span class="visually-hidden">Cargando comunicados...</span>
+    </div>
+    <p class="mt-2 text-muted">Cargando documentos oficiales...</p>
+  </div>
+</div>
+        <!-- Paginación -->
+       <!-- Paginación Dinámica -->
+<div class="paginacion-comunicados-wrapper text-center mt-4">
+  <ul class="paginacion-lista-custom d-flex justify-content-center flex-wrap list-unstyled gap-1" id="contenedor-paginacion">
+    <!-- Los números se generarán aquí dinámicamente manteniendo tus estilos -->
+  </ul>
+</div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       VENTANA EMERGENTE (MODAL BOOTSTRAP 5) - VISTA DEL COMUNICADO 1
+       ========================================================================== -->
+  <div class="modal fade" id="modalComunicado1" tabindex="-1" aria-labelledby="modalComunicado1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-comunicado-custom shadow-lg">
+        <button type="button" class="btn-close-modal-comunicado position-absolute top-0 end-0 m-3 btn border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+        <div class="modal-body p-4 p-md-5">
+          <div class="encabezado-documento-modal d-flex align-items-center mb-4 flex-wrap text-center text-sm-start justify-content-center justify-content-sm-start">
+            <img src="img/logo_enriquepaillardelle.png" alt="Logo Colegio" class="me-sm-3 mb-2 mb-sm-0" style="height: 65px;">
+            <div>
+              <h4 class="m-0 color-azul-ie">COLEGIO</h4>
+              <h3 class="m-0 color-azul-ie fw-bold font-montserrat">ENRIQUE PAILLARDELLE</h3>
+            </div>
+          </div>
+          <div class="linea-separadora-modal-amarilla mb-4"></div>
+          <div class="contenido-documento-modal text-center">
+            <h2 class="titulo-interno-documento fw-bold mb-2 fs-4">COMUNICADO N° 024-2026</h2>
+            <p class="fecha-documento-modal text-end text-muted font-italic mb-4">Fecha: 15 de agosto de 2026</p>
+            <div class="texto-oficial-documento text-start mb-5">
+              <p>Estimados padres de familia y comunidad educativa:</p>
+              <p>Se comunica a toda la comunidad educativa que, debido al mantenimiento programado del sistema eléctrico general de nuestra institución, las clases presenciales quedarán suspendidas los días <strong>18 y 19 de agosto de 2026</strong>.</p>
+              <p>Las actividades académicas se desarrollarán de manera virtual a través de nuestra plataforma institucional para evitar retrasos en el calendario.</p>
+              <p>Agradecemos su comprensión y colaboración en la mejora de nuestras infraestructuras.</p>
+              <p class="mt-4">Atentamente,</p>
+              <div class="firma-colegio-modal text-center mt-5">
+                <p class="fw-bold m-0 text-uppercase">Dirección General</p>
+                <p class="text-muted small">Colegio Enrique Paillardelle</p>
+              </div>
+            </div>
+            <div class="contenedor-boton-descarga-modal text-center">
+              <a href="documentos/comunicado_mantenimiento.pdf" download="Suspension_de_clases_por_mantenimiento.pdf" class="btn btn-primary btn-descargar-pdf-modal">
+                <i class="fa-solid fa-circle-down"></i> Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modalComunicado2 -->
+  <div class="modal fade" id="modalComunicado2" tabindex="-1" aria-labelledby="modalComunicado2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-comunicado-custom shadow-lg">
+        <button type="button" class="btn-close-modal-comunicado position-absolute top-0 end-0 m-3 btn border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+        <div class="modal-body p-4 p-md-5">
+          <div class="encabezado-documento-modal d-flex align-items-center mb-4 flex-wrap text-center text-sm-start justify-content-center justify-content-sm-start">
+            <img src="img/logo_enriquepaillardelle.png" alt="Logo Colegio" class="me-sm-3 mb-2 mb-sm-0" style="height: 65px;">
+            <div>
+              <h4 class="m-0 color-azul-ie">COLEGIO</h4>
+              <h3 class="m-0 color-azul-ie fw-bold font-montserrat">ENRIQUE PAILLARDELLE</h3>
+            </div>
+          </div>
+          <div class="linea-separadora-modal-amarilla mb-4"></div>
+          <div class="contenido-documento-modal text-center">
+            <h2 class="titulo-interno-documento fw-bold mb-2 fs-4">COMUNICADO N° 023-2026</h2>
+            <p class="fecha-documento-modal text-end text-muted font-italic mb-4">Fecha: 05 de agosto de 2026</p>
+            <div class="texto-oficial-documento text-start mb-5">
+              <p>Estimados padres de familia y tutores:</p>
+              <p>Se les invita cordialmente a la entrega presencial de las libretas de notas correspondientes al <strong>segundo bimestre</strong> académico del año lectivo.</p>
+              <p>La atención se realizará dentro de sus respectivas aulas por orden de llegada, cumpliendo estrictamente los horarios enviados por cada tutor.</p>
+              <p>Su asistencia es de vital importancia para el seguimiento del rendimiento de sus hijos.</p>
+              <p class="mt-4">Atentamente,</p>
+              <div class="firma-colegio-modal text-center mt-5">
+                <p class="fw-bold m-0 text-uppercase">Dirección Académica</p>
+                <p class="text-muted small">Colegio Enrique Paillardelle</p>
+              </div>
+            </div>
+            <div class="contenedor-boton-descarga-modal text-center">
+              <a href="documentos/entrega_libretas.pdf" download="Entrega_de_libretas_2do_bimestre.pdf" class="btn btn-primary btn-descargar-pdf-modal">
+                <i class="fa-solid fa-circle-down"></i> Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modalComunicado3 -->
+  <div class="modal fade" id="modalComunicado3" tabindex="-1" aria-labelledby="modalComunicado3Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-comunicado-custom shadow-lg">
+        <button type="button" class="btn-close-modal-comunicado position-absolute top-0 end-0 m-3 btn border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+        <div class="modal-body p-4 p-md-5">
+          <div class="encabezado-documento-modal d-flex align-items-center mb-4 flex-wrap text-center text-sm-start justify-content-center justify-content-sm-start">
+            <img src="img/logo_enriquepaillardelle.png" alt="Logo Colegio" class="me-sm-3 mb-2 mb-sm-0" style="height: 65px;">
+            <div>
+              <h4 class="m-0 color-azul-ie">COLEGIO</h4>
+              <h3 class="m-0 color-azul-ie fw-bold font-montserrat">ENRIQUE PAILLARDELLE</h3>
+            </div>
+          </div>
+          <div class="linea-separadora-modal-amarilla mb-4"></div>
+          <div class="contenido-documento-modal text-center">
+            <h2 class="titulo-interno-documento fw-bold mb-2 fs-4">COMUNICADO N° 022-2026</h2>
+            <p class="fecha-documento-modal text-end text-muted font-italic mb-4">Fecha: 02 de agosto de 2026</p>
+            <div class="texto-oficial-documento text-start mb-5">
+              <p>Estimados padres de familia:</p>
+              <p>Se les convoca con carácter de urgencia y obligatorio a la <strong>Reunión Extraordinaria General</strong> de padres de familia para definir los proyectos institucionales de fin de año.</p>
+              <p>La asamblea tendrá lugar en el auditorio principal de nuestra institución el próximo viernes a partir de las 6:30 p.m.</p>
+              <p>Agradecemos desde ya su alto sentido de compromiso educativo.</p>
+              <p class="mt-4">Atentamente,</p>
+              <div class="firma-colegio-modal text-center mt-5">
+                <p class="fw-bold m-0 text-uppercase">Comité Central de Padres</p>
+                <p class="text-muted small">Colegio Enrique Paillardelle</p>
+              </div>
+            </div>
+            <div class="contenedor-boton-descarga-modal text-center">
+              <a href="documentos/reunion_padres.pdf" download="Reunion_extraordinaria_de_padres.pdf" class="btn btn-primary btn-descargar-pdf-modal">
+                <i class="fa-solid fa-circle-down"></i> Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modalComunicado4 -->
+  <div class="modal fade" id="modalComunicado4" tabindex="-1" aria-labelledby="modalComunicado4Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-comunicado-custom shadow-lg">
+        <button type="button" class="btn-close-modal-comunicado position-absolute top-0 end-0 m-3 btn border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+        <div class="modal-body p-4 p-md-5">
+          <div class="encabezado-documento-modal d-flex align-items-center mb-4 flex-wrap text-center text-sm-start justify-content-center justify-content-sm-start">
+            <img src="img/logo_enriquepaillardelle.png" alt="Logo Colegio" class="me-sm-3 mb-2 mb-sm-0" style="height: 65px;">
+            <div>
+              <h4 class="m-0 color-azul-ie">COLEGIO</h4>
+              <h3 class="m-0 color-azul-ie fw-bold font-montserrat">ENRIQUE PAILLARDELLE</h3>
+            </div>
+          </div>
+          <div class="linea-separadora-modal-amarilla mb-4"></div>
+          <div class="contenido-documento-modal text-center">
+            <h2 class="titulo-interno-documento fw-bold mb-2 fs-4">PROCESO DE ADMISIÓN 2027</h2>
+            <p class="fecha-documento-modal text-end text-muted font-italic mb-4">Fecha: 25 de julio de 2026</p>
+            <div class="texto-oficial-documento text-start mb-5">
+              <p>Estimada comunidad y futuros postulantes:</p>
+              <p>Hacemos oficial la apertura del cronograma de reservas de vacantes e inscripciones para el <strong>Proceso de Matrícula Regular 2027</strong> tanto para los niveles de Inicial, Primaria y Secundaria.</p>
+              <p>Los requisitos documentales, costos de derecho y los enlaces directos de postulación en la secretaría web digital se especifican en el documento completo descargable.</p>
+              <p class="mt-4">Atentamente,</p>
+              <div class="firma-colegio-modal text-center mt-5">
+                <p class="fw-bold m-0 text-uppercase">Área de Admisiones</p>
+                <p class="text-muted small">Colegio Enrique Paillardelle</p>
+              </div>
+            </div>
+            <div class="contenedor-boton-descarga-modal text-center">
+              <a href="documentos/proceso_matricula_2027.pdf" download="Cronograma_proceso_matricula_2027.pdf" class="btn btn-primary btn-descargar-pdf-modal">
+                <i class="fa-solid fa-circle-down"></i> Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modalComunicado5 -->
+  <div class="modal fade" id="modalComunicado5" tabindex="-1" aria-labelledby="modalComunicado5Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-comunicado-custom shadow-lg">
+        <button type="button" class="btn-close-modal-comunicado position-absolute top-0 end-0 m-3 btn border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+        <div class="modal-body p-4 p-md-5">
+          <div class="encabezado-documento-modal d-flex align-items-center mb-4 flex-wrap text-center text-sm-start justify-content-center justify-content-sm-start">
+            <img src="img/logo_enriquepaillardelle.png" alt="Logo Colegio" class="me-sm-3 mb-2 mb-sm-0" style="height: 65px;">
+            <div>
+              <h4 class="m-0 color-azul-ie">COLEGIO</h4>
+              <h3 class="m-0 color-azul-ie fw-bold font-montserrat">ENRIQUE PAILLARDELLE</h3>
+            </div>
+          </div>
+          <div class="linea-separadora-modal-amarilla mb-4"></div>
+          <div class="contenido-documento-modal text-center">
+            <h2 class="titulo-interno-documento fw-bold mb-2 fs-4">ROL DE EXÁMENES</h2>
+            <p class="fecha-documento-modal text-end text-muted font-italic mb-4">Fecha: 18 de julio de 2026</p>
+            <div class="texto-oficial-documento text-start mb-5">
+              <p>Estimados alumnos y padres de familia:</p>
+              <p>Se adjuntan los bloques de horarios, temarios y normativas para el correcto desarrollo del <strong>Rol de Exámenes del Segundo Periodo</strong> correspondientes a este tramo del ciclo.</p>
+              <p>Exhortamos a todos los estudiantes a repasar y prepararse académicamente de forma debida para asegurar los mejores resultados posibles en las pruebas.</p>
+              <p class="mt-4">Atentamente,</p>
+              <div class="firma-colegio-modal text-center mt-5">
+                <p class="fw-bold m-0 text-uppercase">Coordinación Pedagógica</p>
+                <p class="text-muted small">Colegio Enrique Paillardelle</p>
+              </div>
+            </div>
+            <div class="contenedor-boton-descarga-modal text-center">
+              <a href="documentos/rol_examenes.pdf" download="Rol_de_examenes_bimestrales.pdf" class="btn btn-primary btn-descargar-pdf-modal">
+                <i class="fa-solid fa-circle-down"></i> Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modalComunicado6 -->
+  <div class="modal fade" id="modalComunicado6" tabindex="-1" aria-labelledby="modalComunicado6Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-comunicado-custom shadow-lg">
+        <button type="button" class="btn-close-modal-comunicado position-absolute top-0 end-0 m-3 btn border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+          <i class="fa-solid fa-xmark fs-4"></i>
+        </button>
+        <div class="modal-body p-4 p-md-5">
+          <div class="encabezado-documento-modal d-flex align-items-center mb-4 flex-wrap text-center text-sm-start justify-content-center justify-content-sm-start">
+            <img src="img/logo_enriquepaillardelle.png" alt="Logo Colegio" class="me-sm-3 mb-2 mb-sm-0" style="height: 65px;">
+            <div>
+              <h4 class="m-0 color-azul-ie">COLEGIO</h4>
+              <h3 class="m-0 color-azul-ie fw-bold font-montserrat">ENRIQUE PAILLARDELLE</h3>
+            </div>
+          </div>
+          <div class="linea-separadora-modal-amarilla mb-4"></div>
+          <div class="contenido-documento-modal text-center">
+            <h2 class="titulo-interno-documento fw-bold mb-2 fs-4">TALLERES DE INVIERNO</h2>
+            <p class="fecha-documento-modal text-end text-muted font-italic mb-4">Fecha: 10 de julio de 2026</p>
+            <div class="texto-oficial-documento text-start mb-5">
+              <p>Queridos alumnos y familias:</p>
+              <p>¡El deporte no se detiene! Anunciamos el inicio del periodo oficial de inscripciones para nuestras disciplinas extraescolares de invierno: <strong>Fútbol, Vóley, Básquet y Ajedrez</strong>.</p>
+              <p>Los cupos son limitados por categoría académica. Favor revisar el archivo adjunto para coordinar las fichas médicas obligatorias y los horarios fijos de entrenamiento vespertino.</p>
+              <p class="mt-4">Atentamente,</p>
+              <div class="firma-colegio-modal text-center mt-5">
+                <p class="fw-bold m-0 text-uppercase">Coordinación de Deportes</p>
+                <p class="text-muted small">Colegio Enrique Paillardelle</p>
+              </div>
+            </div>
+            <div class="contenedor-boton-descarga-modal text-center">
+              <a href="documentos/talleres_invierno.pdf" download="Inscripcion_talleres_deportivos_invierno.pdf" class="btn btn-primary btn-descargar-pdf-modal">
+                <i class="fa-solid fa-circle-down"></i> Descargar PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer-container"></footer>
+
+  <script src="script.js/comunicados.js"></script>
+  <script src="script.js/header.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js/footer.js"></script>
+</body>
+
+</html>

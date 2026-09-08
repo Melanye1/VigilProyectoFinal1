@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --azul: #003366;
+    --azul-oscuro: #002855;
+    --azul-claro: #0078c9;
+    --amarillo: #ffcc00;
+    --texto: #26364a;
+    --texto-suave: #64748b;
+    --borde: #d8e2ec;
+    --fondo: #f5f8fc
+}
+
+body {
+    background: #fff;
+    color: var(--texto);
+    font-family: "Poppins", sans-serif
+}
+
+header nav ul li a {
+    text-transform: none !important
+}
+
+.contenedor-instalaciones {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto
+}
+
+.encabezado-principal-instalaciones {
+    padding: 50px 20px 46px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc
+}
+
+.contenido-encabezado-instalaciones {
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    text-align: center
+}
+
+.contenido-encabezado-instalaciones>span,
+.encabezado-instalaciones>span,
+.texto-presentacion-instalaciones>span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--azul-claro);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    text-transform: uppercase
+}
+
+.contenido-encabezado-instalaciones h1 {
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.15
+}
+
+.linea-principal-instalaciones {
+    width: 72px;
+    height: 4px;
+    margin: 13px auto 14px;
+    border-radius: 20px;
+    background: var(--amarillo)
+}
+
+.contenido-encabezado-instalaciones p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.7
+}
+
+.encabezado-instalaciones {
+    max-width: 820px;
+    margin-bottom: 28px;
+    text-align: left
+}
+
+.encabezado-instalaciones h2,
+.texto-presentacion-instalaciones h2 {
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: left
+}
+
+.linea-instalaciones {
+    width: 68px;
+    height: 4px;
+    margin: 12px 0 17px;
+    border-radius: 20px;
+    background: var(--amarillo)
+}
+
+.encabezado-instalaciones p,
+.texto-presentacion-instalaciones p {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.8;
+    text-align: left
+}
+
+.presentacion-instalaciones {
+    padding: 56px 0;
+    background: #fff
+}
+
+.bloque-presentacion-instalaciones {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(340px, .8fr);
+    gap: 54px;
+    align-items: center
+}
+
+.texto-presentacion-instalaciones p{
+    max-width:650px;
+    color:#334155;
+    font-size:15px;
+    line-height:1.85;
+    text-align:justify;
+}
+
+.imagen-presentacion-instalaciones,
+.imagen-computo-instalaciones {
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--fondo);
+    box-shadow: 0 8px 22px rgba(0, 51, 102, .10)
+}
+
+.imagen-presentacion-instalaciones img {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover
+}
+
+.ambientes-instalaciones {
+    padding: 56px 0 62px;
+    background: var(--fondo)
+}
+
+.cuadricula-ambientes-instalaciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px
+}
+
+.tarjeta-ambiente-instalaciones {
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 7px 18px rgba(0, 51, 102, .07)
+}
+
+.tarjeta-ambiente-instalaciones img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover
+}
+
+.tarjeta-ambiente-instalaciones h3 {
+    padding: 17px 20px 19px;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 800
+}
+
+.computo-instalaciones {
+    padding: 56px 0 62px;
+    background: #fff
+}
+
+.galeria-computo-instalaciones {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px
+}
+
+.imagen-computo-instalaciones img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover
+}
+
+@media(max-width:900px) {
+    .bloque-presentacion-instalaciones {
+        grid-template-columns: 1fr;
+        gap: 30px
+    }
+
+    .imagen-presentacion-instalaciones {
+        max-width: 620px
+    }
+}
+
+@media(max-width:680px) {
+    .contenedor-instalaciones {
+        width: calc(100% - 30px)
+    }
+
+    .encabezado-principal-instalaciones {
+        padding: 38px 18px 34px
+    }
+
+    .contenido-encabezado-instalaciones h1 {
+        font-size: 32px
+    }
+
+    .contenido-encabezado-instalaciones p {
+        font-size: 13.5px
+    }
+
+    .presentacion-instalaciones,
+    .ambientes-instalaciones,
+    .computo-instalaciones {
+        padding: 44px 0
+    }
+
+    .encabezado-instalaciones h2,
+    .texto-presentacion-instalaciones h2 {
+        font-size: 26px
+    }
+
+    .cuadricula-ambientes-instalaciones,
+    .galeria-computo-instalaciones {
+        grid-template-columns: 1fr;
+        gap: 20px
+    }
+
+    .imagen-presentacion-instalaciones img,
+    .tarjeta-ambiente-instalaciones img,
+    .imagen-computo-instalaciones img {
+        height: 240px
+    }
+}

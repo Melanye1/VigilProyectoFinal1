@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Colegio Enrique Paillardelle</title>
+  <link rel="stylesheet" href="css/paginaweb.css">
+  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="icon" type="image/png" href="img/logo_enriquepaillardelle.png">
+  <!-- Agregamos Font Awesome para asegurar la carga de iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Contenedor donde se cargará el encabezado dinámicamente -->
+  <div id="header-container"></div>
+
+  <section class="banner-seccion-contacto">
+    <div class="capa-degradada"></div>
+    <div class="contenido-banner-seccion">
+      <h2>CONTACTO</h2>
+      <div class="linea-decorativa-amarilla"></div>
+      <p>Comunícate con nosotros para cualquier consulta o información institucional</p>
+    </div>
+  </section>
+
+  <main class="bloque-contenido-contacto">
+    <div class="titulo-central-contacto">
+      <h3>CONTÁCTANOS</h3>
+      <p>Estamos aquí para atender tus consultas y brindarte información sobre nuestra institución</p>
+    </div>
+
+    <div class="tarjeta-contenedor-formulario">
+
+      <div class="columna-formulario">
+       <!-- Busca tu etiqueta <form> actual y agrégale el id="form-contacto" -->
+<form id="form-contacto" action="#" method="POST">
+  <div class="grupo-campo">
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+  </div>
+
+  <div class="grupo-campo">
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+  </div>
+
+  <div class="grupo-campo">
+    <label for="asunto">Asunto</label>
+    <input type="text" id="asunto" name="asunto" placeholder="Motivo de consulta" required>
+  </div>
+
+  <div class="grupo-campo">
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Ingresa tu mensaje aquí" required></textarea>
+  </div>
+
+  <button type="submit" class="btn-enviar-mensaje">Enviar mensaje</button>
+</form>
+      </div>
+
+      <div class="columna-info-mapa">
+        <div class="bloque-info-detalle">
+          <h4>Información de contacto</h4>
+          <p><strong>Dirección:</strong> AVENIDA MUNICIPAL S/N, Tacna, Coronel Gregorio Albarracín Lanchipa.</p>
+          <p><strong>Correo electrónico:</strong> enriquepaillardelle42238@gmail.com</p>
+          <p><strong>Teléfono:</strong> (052) 504692</p>
+        </div>
+
+        <div class="bloque-mapa-incrustado">
+          <h5>NUESTRA UBICACIÓN</h5>
+          <div class="contenedor-iframe-mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15172.30514102235!2d-70.2503196!3d-18.0469279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915ac8ad058202cf%3A0x4e14101f98952041!2sI.E.%20Enrique%20Paillardelle%2042238!5e0!3m2!1ses-419!2spe!4v1718000000000!5m2!1ses-419!2spe"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="footer-container"></footer>
+<!-- SweetAlert2 para alertas estéticas -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <!-- Tus scripts personalizados -->
+  <script src="script.js/header.js"></script>
+  <script src="script.js/contacto.js"></script>
+
+  <script src="script.js/footer.js"></script>
+</body>
+
+</html>

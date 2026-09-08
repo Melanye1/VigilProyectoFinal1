@@ -1,0 +1,348 @@
+/* =========================================================
+   NUEVA COMUNIDAD PALLARDELLINA (ESTILO PREMIUM FIGMA)
+   ========================================================= */
+
+:root {
+  --azul-fondo-card: #003580;
+  --azul-institucional: #002350;
+  --amarillo-destaque: #ffc107;
+  --texto-gris-cool: #516379;
+}
+
+header nav ul li a {
+  text-transform: none !important;
+}
+
+/* =========================================================
+   BANNER DIVIDIDO (DISEÑO ACTUALIZADO)
+   ========================================================= */
+.banner-comunidad-split {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+.contenedor-banner-split {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.bloque-texto-banner {
+  flex: 1;
+  text-align: left;
+}
+
+.bloque-texto-banner h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.1;
+  color: #003366;
+  margin: 0 0 15px 0;
+  text-align: left;
+  /* Fuerza la alineación izquierda del texto */
+}
+
+.bloque-texto-banner h2 .resaltado-banner {
+  color: #002350;
+}
+
+.linea-decorativa-amarilla {
+  width: 50px;
+  height: 4px;
+  background-color: var(--amarillo-destaque);
+  margin: 0 0 25px 0;
+  /* El tercer cero asegura que no se centre, manteniéndose a la izquierda */
+  border-radius: 2px;
+}
+
+.bloque-texto-banner p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--texto-gris-cool);
+  margin: 0;
+  text-align: justify;
+}
+
+.bloque-imagen-banner {
+  flex: 1;
+}
+
+.bloque-imagen-banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+/* =========================================================
+   SECCIÓN EQUIPO HUMANO (TARJETAS AZULES)
+   ========================================================= */
+.seccion-equipo-humano {
+  background-color: #f4f7fc;
+  padding: 60px 0;
+}
+
+.titulo-centralizado-nuevo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titulo-centralizado-nuevo h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #002350;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+.linea-titulo-corto {
+  width: 40px;
+  height: 3px;
+  background-color: var(--amarillo-destaque);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.grid-equipo-tarjetas {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tarjeta-personal-azul {
+  background: linear-gradient(145deg, #002c6c 0%, #001f52 100%);
+  border-radius: 12px;
+  padding: 30px 22px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 31, 80, 0.15);
+  border-bottom: 4px solid var(--amarillo-destaque);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-personal-azul:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 31, 80, 0.25);
+}
+
+.encabezado-tarjeta-personal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.circulo-icono-personal {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+/* Colores personalizados de los iconos circulares */
+.circulo-icono-personal.naranja {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.circulo-icono-personal.azul {
+  background-color: #ffffff;
+  color: #003580;
+}
+
+.circulo-icono-personal.amarillo {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.circulo-icono-personal.blanco-azul {
+  background-color: #ffffff;
+  color: #003580;
+}
+
+.tarjeta-personal-azul h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.tarjeta-personal-azul p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Marca de agua de fondo (EP) */
+.marca-agua-logo {
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 70px;
+  color: rgba(255, 255, 255, 0.04);
+  user-select: none;
+  z-index: 1;
+}
+
+/* =========================================================
+   SECCIÓN INFERIOR: METRICAS Y CITA
+   ========================================================= */
+.contenedor-metricas-cita {
+  background-color: #f4f7fc;
+  padding: 0 0 60px 0;
+}
+
+.bloque-metrica-flex {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.02);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.bloque-cita-izquierdo {
+  flex: 1.2;
+  position: relative;
+  padding-left: 45px;
+}
+
+.icono-comillas-abrir {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-size: 38px;
+  color: var(--amarillo-destaque);
+}
+
+.bloque-cita-izquierdo p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 15px 0;
+}
+
+.firma-comunidad {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.linea-firma {
+  width: 35px;
+  height: 2px;
+  background-color: var(--amarillo-destaque);
+}
+
+.firma-comunidad span {
+  font-family: 'Dancing Script', 'Caveat', cursive, sans-serif;
+  font-size: 18px;
+  color: #003366;
+  font-weight: bold;
+}
+
+/* Grid de los números estadísticos */
+.grid-contadores-metricas {
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  border-left: 1px solid #e2e8f0;
+  padding-left: 30px;
+}
+
+.item-contador {
+  text-align: center;
+}
+
+.item-contador i {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.item-contador i.bi-heart-fill {
+  color: #ff4d4d;
+  /* Corazón rojo para el compromiso */
+}
+
+.item-contador h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: #002350;
+  margin: 0 0 2px 0;
+}
+
+.item-contador p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: var(--texto-gris-cool);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* =========================================================
+   RESPONSIVIDAD
+   ========================================================= */
+@media (max-width: 992px) {
+  .contenedor-banner-split {
+    flex-direction: column;
+  }
+
+  .bloque-texto-banner {
+    text-align: left;
+    /* Mantiene la alineación a la izquierda en tablets/móviles */
+  }
+
+  .linea-decorativa-amarilla {
+    margin: 0 0 25px 0;
+    /* Evita que se centre en móviles */
+  }
+
+  /* ... resto de tus estilos de media query ... */
+}
+
+@media (max-width: 600px) {
+  .bloque-texto-banner h2 {
+    font-size: 30px;
+  }
+
+  .grid-equipo-tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-contadores-metricas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}

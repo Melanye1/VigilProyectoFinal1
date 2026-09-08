@@ -1,0 +1,304 @@
+/* =========================================================
+   PERFIL DE USUARIO - DASHBOARD
+   Colegio Enrique Paillardelle
+   ========================================================= */
+
+.perfil-dashboard-card {
+  width: 100%;
+  min-height: 590px;
+  background-color: #ffffff;
+  border: 1px solid #9bb4d1;
+  border-radius: 3px;
+  padding: 28px 32px 35px;
+  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.06);
+}
+
+/* =========================================================
+   DISTRIBUCIÓN PRINCIPAL
+   ========================================================= */
+
+.perfil-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 55px;
+  align-items: start;
+  padding: 10px 25px 0;
+}
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+.perfil-formulario {
+  width: 100%;
+}
+
+.grupo-campo-perfil {
+  margin-bottom: 17px;
+}
+
+.grupo-campo-perfil label {
+  display: block;
+  margin-bottom: 6px;
+  color: #0078c9;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.grupo-campo-perfil input {
+  width: 100%;
+  height: 43px;
+  border: 1px solid #829dc0;
+  border-radius: 2px;
+  background-color: #ffffff;
+  padding: 0 14px;
+  color: #315b79;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.grupo-campo-perfil input:hover {
+  border-color: #0078c9;
+}
+
+.grupo-campo-perfil input:focus {
+  border-color: #0078c9;
+  background-color: #fbfdff;
+  box-shadow: 0 0 0 3px rgba(0, 120, 201, 0.12);
+}
+
+/* Campo de contraseña */
+
+.campo-con-icono {
+  position: relative;
+}
+
+.campo-con-icono input {
+  padding-right: 48px;
+}
+
+.btn-ver-password {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #0078c9;
+  font-size: 18px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-ver-password:hover {
+  background-color: rgba(0, 120, 201, 0.1);
+  color: #003366;
+}
+
+/* =========================================================
+   BOTÓN GUARDAR
+   ========================================================= */
+
+.contenedor-boton-guardar {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-guardar-perfil {
+  min-width: 155px;
+  border: none;
+  background-color: transparent;
+  color: #006fc2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-guardar-perfil:hover {
+  color: #003366;
+  transform: translateY(-2px);
+}
+
+.icono-guardar-perfil {
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #0078c9, #56b8ee);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  box-shadow: 0 5px 12px rgba(0, 120, 201, 0.22);
+}
+
+/* =========================================================
+   FOTO DE USUARIO
+   ========================================================= */
+
+.perfil-fotografia {
+  width: 100%;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.perfil-fotografia h3 {
+  margin: 0 0 22px;
+  color: #006cb5;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.contenedor-foto-perfil {
+  position: relative;
+  width: 185px;
+  height: 185px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+}
+
+.contenedor-foto-perfil::before {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border: 2px solid rgba(0, 120, 201, 0.18);
+  border-radius: 50%;
+}
+
+.contenedor-foto-perfil img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 9px 25px rgba(0, 51, 102, 0.2);
+}
+
+.estado-foto-perfil {
+  position: absolute;
+  right: 7px;
+  bottom: 11px;
+  width: 32px;
+  height: 32px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #21a366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.btn-cambiar-foto {
+  width: 185px;
+  min-height: 48px;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #006dc5, #99c6ef);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px 18px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.35;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 109, 197, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.btn-cambiar-foto:hover {
+  color: #ffffff;
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 9px 19px rgba(0, 109, 197, 0.26);
+}
+
+.texto-ayuda-foto {
+  margin: 14px 0 0;
+  color: #7e8d9c;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 11px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .perfil-dashboard-card {
+    padding: 25px;
+  }
+
+  .perfil-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 5px 10px 0;
+  }
+
+  .perfil-fotografia {
+    order: -1;
+  }
+
+  .perfil-formulario {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .perfil-dashboard-card {
+    padding: 20px 16px 28px;
+  }
+
+  .perfil-grid {
+    padding: 0;
+    gap: 32px;
+  }
+
+  .grupo-campo-perfil input {
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .contenedor-foto-perfil {
+    width: 155px;
+    height: 155px;
+  }
+
+  .btn-cambiar-foto {
+    width: 175px;
+  }
+}

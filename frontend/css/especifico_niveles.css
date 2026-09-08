@@ -1,0 +1,222 @@
+/* --- BANNER PRINCIPAL CON EFECTO FIXED SCROLL --- */
+.banner-seccion-niveles {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #002244;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* Fondos específicos para simular cada sección */
+.inicial-bg {
+    background-image: url('../img/niveles_educativos/inicial.jpg');
+}
+
+.primaria-bg {
+    background-image: url('../img/niveles_educativos/primaria.webp');
+}
+
+.secundaria-bg {
+    background-image: url('../img/niveles_educativos/secundaria.jpg');
+}
+
+.banner-seccion-niveles .capa-degradada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 34, 68, 0.9), rgba(0, 51, 102, 0.5));
+    z-index: 1;
+}
+
+.contenido-banner-seccion {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.contenido-banner-seccion h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin-bottom: 8px;
+}
+
+.linea-decorativa-amarilla {
+    width: 120px;
+    height: 4px;
+    background-color: #FFD23B;
+    margin-bottom: 15px;
+}
+
+/* Migas de pan (Breadcrumb) */
+.breadcrumb-niveles {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.breadcrumb-niveles a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.breadcrumb-niveles a:hover {
+    color: #FFD23B;
+}
+
+.breadcrumb-niveles span {
+    color: #FFD23B;
+    font-weight: 600;
+}
+
+/* --- BLOQUE PRESENTACIÓN INTERNO --- */
+.titulo-seccion-especifica {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #003366;
+    font-weight: 700;
+}
+
+.parrafo-justificado {
+    font-size: 15.5px;
+    color: #444444;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.img-presentacion-nivel {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.lista-checks-propuestas {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-checks-propuestas li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #444444;
+}
+
+/* --- TARJETAS DE PILARES / ENFOQUES --- */
+.tarjeta-pilar-especifico {
+    background: #ffffff;
+    padding: 25px 15px;
+    border-radius: 10px;
+    border: 1px solid #eef2f6;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.tarjeta-pilar-especifico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.06);
+}
+
+.icono-pilar-especifico {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 12px;
+}
+
+.tarjeta-pilar-especifico h5,
+.tarjeta-pilar-especifico h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #003366;
+}
+
+.tarjeta-pilar-especifico p {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 0;
+}
+
+/* --- ÁREAS CURRICULARES (PRIMARIA GRID) --- */
+.row-cols-md-7>* {
+    flex: 0 0 auto;
+    width: 14.2857%;
+}
+
+@media (max-width: 768px) {
+    .row-cols-md-7>* {
+        width: 33.3333%;
+    }
+}
+
+@media (max-width: 480px) {
+    .row-cols-md-7>* {
+        width: 50%;
+    }
+}
+
+.item-area-curric {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 8px;
+    padding: 15px 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.item-area-curric i {
+    font-size: 24px;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.item-area-curric p {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    color: #333333;
+}
+
+/* --- BARRA DE NAVEGACIÓN INFERIOR --- */
+.barra-navegacion-niveles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid #eef2f6;
+}
+
+.barra-navegacion-niveles a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14.5px;
+    transition: color 0.2s ease;
+}
+
+.link-anterior {
+    color: #003366;
+}
+
+.link-siguiente {
+    color: #0078C9;
+}
+
+.link-volver-todos {
+    color: #555555;
+}
+
+.barra-navegacion-niveles a:hover {
+    opacity: 0.85;
+}

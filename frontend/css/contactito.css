@@ -1,0 +1,31 @@
+/* Estilos para el panel lateral (Drawer) */
+.panel-lateral-detalle {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: min(100%, 28rem);
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-lateral-detalle.active { right: 0; }
+
+.header-panel-lateral {
+    padding: 20px;
+    background: #00204a; /* Azul institucional */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cuerpo-panel-lateral { padding: 25px; overflow-y: auto; }
+
+.info-item-drawer { margin-bottom: 20px; }
+.label-drawer { display: block; font-weight: bold; color: #555; margin-bottom: 5px; font-size: 0.9em; }
+.valor-drawer { background: #f8f9fa; padding: 10px; border-radius: 5px; border-left: 4px solid #ffc107; }

@@ -1,0 +1,41 @@
+// Dentro de tu función descargarPDF(id)
+const fechaFormateada = new Date(comunicado.created_at).toLocaleDateString();
+
+const htmlContenido = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>${comunicado.titulo}</title>
+        <style>
+            body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 45px; color: #333; line-height: 1.6; }
+            .header { text-align: center; border-bottom: 3px solid #003366; padding-bottom: 15px; margin-bottom: 25px; }
+            .header h1 { color: #003366; font-size: 22px; margin: 0; text-transform: uppercase; }
+            .header p { margin: 5px 0 0 0; color: #666; font-size: 13px; }
+            .meta-pdf { text-align: right; font-size: 12px; color: #555; margin-bottom: 25px; font-style: italic; }
+            .titulo-comunicado { font-size: 18px; color: #111; font-weight: bold; margin-bottom: 20px; text-align: center; text-transform: uppercase; }
+            .contenido { font-size: 14px; text-align: justify; white-space: pre-line; margin-bottom: 50px; color: #222; }
+            .footer { margin-top: 60px; text-align: center; font-size: 11px; color: #777; border-top: 1px solid #ddd; padding-top: 10px; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Colegio Enrique Paillardelle</h1>
+            <p>Comunicado Oficial Institucional</p>
+        </div>
+        <div class="meta-pdf">
+            <strong>Publicado por:</strong> ${comunicado.usuario_creador}<br>
+            <strong>Fecha de emisión:</strong> ${fechaFormateada}
+        </div>
+        <div class="titulo-comunicado">${comunicado.titulo}</div>
+        <div class="contenido">${comunicado.cuerpo}</div>
+        <div class="footer">
+            Dirección General • Institución Educativa Enrique Paillardelle<br>
+            Documento digital válido emitido desde el Panel Administrativo.
+        </div>
+        <script>
+            window.onload = function() { window.print(); window.close(); }
+        </script>
+    </body>
+    </html>
+`;

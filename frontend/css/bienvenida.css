@@ -1,0 +1,215 @@
+header nav ul li a {
+  text-transform: none !important;
+}
+
+/* --- BANNER DE TITULO CON EFECTO SCROLL --- */
+.banner-seccion-bienvenida {
+  position: relative;
+  width: 100%;
+  min-height: clamp(14rem, 30vw, 20rem);
+  background-color: #002244; /* Color de respaldo si no carga la imagen */
+  background-image: url('../img/imagen_carrusel2.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+.banner-seccion-bienvenida .capa-degradada {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 51, 102, 0.85), rgba(0, 120, 201, 0.4));
+  z-index: 1;
+}
+
+.contenido-banner-seccion {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 800px;
+}
+
+.contenido-banner-seccion h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+.linea-decorativa-amarilla {
+  width: 180px;
+  height: 4px;
+  background-color: #FFD23B;
+  margin-bottom: 15px;
+}
+
+.contenido-banner-seccion p {
+  font-size: 18px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --- ANIMACION DE ENTRADA (FADE IN UP) --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- CUERPO GENERAL --- */
+.bloque-contenido-bienvenida {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.fila-presentacion-bienvenida {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.columna-texto-bienvenida {
+  flex: 1.3;
+}
+
+.columna-texto-bienvenida h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.columna-texto-bienvenida p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444444;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.columna-destaque-bienvenida {
+  flex: 0.7;
+}
+
+/* --- ESTILO PARA LA NUEVA FOTO --- */
+.foto-destaque-bienvenida {
+  width: 100%;
+  height: auto;
+  max-height: 380px; 
+  object-fit: cover; 
+  border-radius: 12px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+  display: block;
+}
+
+/* --- TARJETAS DIDÁCTICAS --- */
+.contenedor-tarjetas-didacticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tarjeta-didactica {
+  padding: 35px 25px;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.tarjeta-didactica:nth-child(1) {
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  border-bottom: 5px solid #81c784;
+  animation-delay: 0.3s;
+}
+
+.tarjeta-didactica:nth-child(2) {
+  background-color: #e3f2fd;
+  border: 1px solid #bbdefb;
+  border-bottom: 5px solid #64b5f6;
+  animation-delay: 0.5s;
+}
+
+.tarjeta-didactica:nth-child(3) {
+  background-color: #fffde7;
+  border: 1px solid #fff9c4;
+  border-bottom: 5px solid #ffd54f;
+  animation-delay: 0.7s;
+}
+
+.tarjeta-didactica:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-didactica .numero-decorativo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.06);
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.tarjeta-didactica h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.tarjeta-didactica p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #444444;
+  margin: 0;
+}
+
+/* --- ADAPTACIÓN PARA MÓVILES (RESPONSIVE) --- */
+@media (max-width: 950px) {
+  .fila-presentacion-bienvenida {
+    flex-direction: column;
+    gap: 35px;
+  }
+  
+  .contenedor-tarjetas-didacticas {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .banner-seccion-bienvenida {
+    min-height: clamp(12rem, 25vw, 15rem);
+    padding: 0 5%;
+  }
+  
+  .contenido-banner-seccion h2 {
+    font-size: 32px;
+  }
+}

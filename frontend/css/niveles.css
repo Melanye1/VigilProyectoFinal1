@@ -1,0 +1,290 @@
+/* --- BANNER DE TITULO CON EFECTO SCROLL --- */
+.banner-seccion-niveles {
+  position: relative;
+  width: 100%;
+  min-height: clamp(15rem, 32vw, 22rem);
+  background-color: #002244;
+  background-image: url('../img/imagen_carrusel2.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.banner-seccion-niveles .capa-degradada {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 34, 68, 0.8), rgba(0, 51, 102, 0.9));
+  z-index: 1;
+}
+
+.banner-seccion-niveles .contenido-banner-seccion {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 850px;
+}
+
+.banner-seccion-niveles .contenido-banner-seccion h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff !important;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.banner-seccion-niveles .linea-decorativa-amarilla {
+  width: 150px;
+  height: 4px;
+  background-color: #FFD23B;
+  margin-bottom: 20px;
+}
+
+.banner-seccion-niveles .contenido-banner-seccion p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* --- CUERPO GENERAL DE NIVELES --- */
+.bloque-contenido-niveles {
+  max-width: 1200px;
+  margin: 70px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.titulo-secundario-niveles {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.descripcion-propuesta {
+  max-width: 800px;
+  font-size: 15.5px;
+  color: #555555;
+  line-height: 1.7;
+}
+
+/* --- GRID DE TARJETAS DE NIVELES --- */
+.contenedor-tarjetas-niveles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.tarjeta-nivel {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-nivel:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 51, 102, 0.1);
+}
+
+.imagen-tarjeta-nivel {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.imagen-tarjeta-nivel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.burbuja-icono-nivel {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 55px;
+  background-color: #003366;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cuerpo-tarjeta-nivel {
+  padding: 40px 25px 30px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cuerpo-tarjeta-nivel h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.cuerpo-tarjeta-nivel h4 span {
+  display: block;
+  color: #0078C9;
+  font-size: 20px;
+}
+
+.cuerpo-tarjeta-nivel p {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.btn-conocer-mas {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #003366;
+  color: #ffffff;
+  padding: 11px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  align-self: center;
+}
+
+.btn-conocer-mas:hover {
+  background-color: #0078C9;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 120, 201, 0.3);
+}
+
+/* --- SECCIÓN PILARES / BENEFICIOS --- */
+.grid-pilares-beneficios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.pilar-item {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 1px solid #eef2f6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.pilar-item:hover {
+  border-color: rgba(0, 120, 201, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.05);
+}
+
+.icono-pilar {
+  width: 60px;
+  height: 60px;
+  background-color: #f1f7fc;
+  color: #003366;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.pilar-item h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.pilar-item p {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- FRANJA INFERIOR DISTINTIVA --- */
+.franja-frase-niveles {
+  background-color: #002244;
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contenido-frase {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.icono-comilla {
+  font-size: 32px;
+  color: #FFD23B;
+  opacity: 0.3;
+  margin-bottom: 10px;
+}
+
+.franja-frase-niveles p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .contenedor-tarjetas-niveles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-pilares-beneficios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-seccion-niveles {
+    height: 300px;
+  }
+  .banner-seccion-niveles .contenido-banner-seccion h2 {
+    font-size: 32px;
+  }
+  .contenedor-tarjetas-niveles,
+  .grid-pilares-beneficios {
+    grid-template-columns: 1fr;
+  }
+  .titulo-secundario-niveles {
+    font-size: 24px;
+  }
+}

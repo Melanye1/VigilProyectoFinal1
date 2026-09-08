@@ -1,0 +1,350 @@
+/* ==========================================================================
+   ESTILOS PREMIUM Y COMPACTOS: PÁGINA DE PLANA DIRECTIVA (FIEL A FIGMA)
+   ========================================================================== */
+
+/* Forzar tratamiento correcto del menú */
+header nav ul li a {
+  text-transform: none !important;
+}
+
+/* --- CONTENEDOR GENERAL COMPACTO --- */
+.contenedor-principal-pd {
+  max-width: 1100px;
+  /* Un poco más estrecho para centralizar */
+  margin: 30px auto 50px auto;
+  /* Márgenes reducidos */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* --- ENCABEZADO DE TÍTULO CENTRADO Y COMPACTO --- */
+.encabezado-titulo-centrado-pd {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  /* Menos espacio abajo */
+}
+
+.encabezado-titulo-centrado-pd h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  /* Ligeramente más pequeño */
+  color: #003366;
+  /* Azul Institucional */
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.linea-decorativa-amarilla-pd {
+  width: 80px;
+  height: 4px;
+  background-color: #FFD23B;
+  /* Amarillo Institucional */
+  margin: 0 auto 15px auto;
+  border-radius: 2px;
+}
+
+.encabezado-titulo-centrado-pd p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  /* Un poco más pequeño */
+  line-height: 1.5;
+  color: #475569;
+  margin: 0 auto;
+  max-width: 650px;
+  /* Más recogido */
+}
+
+/* --- SUBTÍTULOS DE JERARQUÍA COMPACTOS --- */
+.subtitulo-jerarquia-pd {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  /* Más pequeño */
+  color: #003366;
+  margin-top: 30px;
+  /* Menos espacio arriba */
+  margin-bottom: 20px;
+  letter-spacing: -0.2px;
+}
+
+/* --- DIRECCIÓN GENERAL (TARJETA HORIZONTAL COMPACTA) --- */
+.tarjeta-horizontal-pd-compacta {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  /* Esquinas más suaves */
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.015);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 35px;
+  /* Menos espacio abajo */
+}
+
+.tarjeta-horizontal-pd-compacta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.imagen-directivo-box-compacta {
+  width: 200px;
+  /* Más estrecha */
+  flex-shrink: 0;
+  background-color: #f8fafc;
+}
+
+.imagen-directivo-box-compacta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detalles-directivo-box-compacta {
+  padding: 30px;
+  /* Relleno reducido */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.tag-cargo-pd {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  /* Más pequeño */
+  color: #0056b3;
+  margin-bottom: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.detalles-directivo-box-compacta h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  /* Más pequeño */
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+/* Línea decorativa amarilla debajo de los nombres */
+.linea-decorativa-nombre-pd {
+  width: 45px;
+  height: 3px;
+  background-color: #FFD23B;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.linea-decorativa-nombre-pd.centro {
+  margin: 0 auto 15px auto;
+}
+
+.detalles-directivo-box-compacta p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  /* Más pequeño */
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 18px 0;
+}
+
+.datos-contacto-pd-horizontal {
+  display: flex;
+  gap: 20px;
+  /* Menos espacio entre datos */
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  /* Más pequeño */
+  color: #0056b3;
+  font-weight: 500;
+}
+
+.datos-contacto-pd-horizontal i {
+  margin-right: 5px;
+  color: #64748b;
+}
+
+/* --- EQUIPO DIRECTIVO (GRID DE 3 COLUMNAS COMPACTO) --- */
+.grid-equipo-sub-pd-compacto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  /* Menos espacio entre tarjetas */
+  margin-bottom: 40px;
+  /* Menos espacio abajo */
+}
+
+.tarjeta-vertical-pd-compacta {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 30px 20px;
+  /* Relleno reducido */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.015);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-vertical-pd-compacta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 51, 102, 0.08);
+  border-color: #003366;
+}
+
+.avatar-circular-pd-compacto {
+  width: 90px;
+  /* Más pequeño */
+  height: 90px;
+  /* Más pequeño */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px auto;
+  border: 3px solid #f1f5f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.avatar-circular-pd-compacto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarjeta-vertical-pd-compacta h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  /* Más pequeño */
+  color: #0056b3;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.tarjeta-vertical-pd-compacta h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  /* Más pequeño */
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.tarjeta-vertical-pd-compacta p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  /* Más pequeño */
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0 0 15px 0;
+  flex-grow: 1;
+}
+
+.datos-contacto-pd-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  /* Más pequeño */
+  color: #0056b3;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+  font-weight: 500;
+}
+
+.datos-contacto-pd-vertical i {
+  color: #64748b;
+  margin-right: 3px;
+}
+
+/* --- BLOQUE DE COMPROMISO INFERIOR COMPACTO --- */
+.bloque-footer-compromiso-pd-compacto {
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  padding: 15px 25px;
+  /* Relleno reducido */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+  /* Menos espacio arriba */
+}
+
+.icono-compromiso-pd-compacto {
+  font-size: 22px;
+  /* Más pequeño */
+  background-color: #003366;
+  color: #ffffff;
+  width: 42px;
+  /* Más pequeño */
+  height: 42px;
+  /* Más pequeño */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.texto-compromiso-pd-compacto h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  /* Más pequeño */
+  color: #003366;
+  margin: 0 0 3px 0;
+}
+
+.texto-compromiso-pd-compacto p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  /* Más pequeño */
+  line-height: 1.5;
+  color: #475569;
+  margin: 0;
+}
+
+/* --- AJUSTES DE RESPONSIVIDAD (Media Queries) --- */
+@media (max-width: 992px) {
+  .grid-equipo-sub-pd-compacto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tarjeta-horizontal-pd-compacta {
+    flex-direction: column;
+  }
+
+  .imagen-directivo-box-compacta {
+    width: 100%;
+    height: 220px;
+  }
+
+  .detalles-directivo-box-compacta {
+    padding: 25px;
+  }
+
+  .datos-contacto-pd-horizontal {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-equipo-sub-pd-compacto {
+    grid-template-columns: 1fr;
+  }
+
+  .bloque-footer-compromiso-pd-compacto {
+    flex-direction: column;
+    text-align: center;
+  }
+}

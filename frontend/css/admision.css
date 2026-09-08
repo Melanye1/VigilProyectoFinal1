@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #003366;
+    --azul-oscuro: #002855;
+    --azul-claro: #0078c9;
+    --amarillo: #ffcc00;
+    --texto: #26364a;
+    --texto-suave: #64748b;
+    --borde: #d8e2ec;
+    --fondo: #f5f8fc;
+    --blanco: #fff;
+}
+
+body {
+    background: #fff;
+    color: var(--texto);
+    font-family: "Poppins", sans-serif;
+}
+
+header nav ul li a {
+    text-transform: none !important;
+}
+
+.contenedor-admision {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* =========================================================
+   ENCABEZADO PRINCIPAL
+   ========================================================= */
+
+.encabezado-principal-admision {
+    width: 100%;
+    padding: 50px 20px 46px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+
+.contenido-encabezado-principal {
+    width: min(1000px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contenido-encabezado-principal>span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--azul-claro);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+.contenido-encabezado-principal h1 {
+    margin: 0;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.linea-principal-admision {
+    width: 72px;
+    height: 4px;
+    margin: 13px auto 14px;
+    border-radius: 20px;
+    background: var(--amarillo);
+}
+
+.contenido-encabezado-principal p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =========================================================
+   ENCABEZADOS DE SECCIONES
+   ========================================================= */
+
+.encabezado-admision {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 0 28px;
+    text-align: left;
+}
+
+.encabezado-admision>span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--azul-claro);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.encabezado-admision h2 {
+    margin: 0;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: justify;
+}
+
+.linea-admision {
+    width: 68px;
+    height: 4px;
+    margin: 12px 0 17px;
+    border-radius: 20px;
+    background: var(--amarillo);
+}
+
+.encabezado-admision>p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--texto-suave);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* =========================================================
+   INFORMACIÓN (BLOQUE CORREGIDO)
+   ========================================================= */
+
+.informacion-admision {
+    padding: 46px 0 50px;
+    background: #fff;
+}
+
+/* Cambiamos el comportamiento del contenedor general para controlar el flujo */
+.contenido-informacion-admision {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(320px, .9fr);
+    gap: 40px;
+    align-items: start;
+    position: relative;
+}
+
+.texto-informacion-admision p {
+    margin: 0 0 16px;
+    color: var(--texto-suave);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.imagen-admision {
+    width: 100%;
+    max-width: 580px;
+    /* Incrementamos más el tamaño horizontal de la foto */
+    justify-self: end;
+    /* Forzamos que la imagen suba de forma manual ignorando el espacio del grid */
+    margin-top: -65px;
+    position: relative;
+    z-index: 5;
+}
+
+.imagen-admision img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Evitamos que el margen negativo rompa el diseño en pantallas pequeñas */
+@media(max-width:900px) {
+    .imagen-admision {
+        margin-top: 0;
+        max-width: 500px;
+        justify-self: start;
+    }
+
+    .imagen-admision img {
+        height: 220px;
+    }
+}
+
+.aviso-importante-admision {
+    padding: 24px;
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--amarillo);
+    border-radius: 8px;
+    background: #f8fbfe;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.icono-aviso-admision {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.aviso-importante-admision h3 {
+    margin: 0 0 8px;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.aviso-importante-admision p {
+    margin: 0;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   REQUISITOS
+   ========================================================= */
+
+.requisitos-admision {
+    padding: 56px 0;
+    background: var(--fondo);
+}
+
+.contenido-requisitos-admision {
+    max-width: 930px;
+}
+
+.lista-requisitos-admision {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 28px;
+}
+
+.lista-requisitos-admision li {
+    min-height: 98px;
+    padding: 18px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.icono-requisito-admision {
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    background: #eaf4fc;
+    color: var(--azul-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 17px;
+}
+
+.lista-requisitos-admision h3 {
+    margin: 0 0 5px;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.lista-requisitos-admision p {
+    margin: 0;
+    color: #526273;
+    font-size: 12.5px;
+    line-height: 1.6;
+}
+
+.nota-requisitos-admision {
+    max-width: 930px;
+    margin-top: 17px;
+    padding: 14px 17px;
+    border-left: 4px solid var(--amarillo);
+    background: #fff9df;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.nota-requisitos-admision i {
+    margin-top: 2px;
+    color: #bb8500;
+}
+
+.nota-requisitos-admision p {
+    margin: 0;
+    color: #5d5130;
+    font-size: 12.5px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   RESPONSIVE TABLET
+   ========================================================= */
+
+@media(max-width:900px) {
+
+    .contenido-informacion-admision {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-admision {
+        max-width: 500px;
+        justify-self: start;
+    }
+
+    .imagen-admision img {
+        height: 220px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE CELULAR
+   ========================================================= */
+
+@media(max-width:680px) {
+
+    .contenedor-admision {
+        width: calc(100% - 30px);
+    }
+
+    .encabezado-principal-admision {
+        padding: 38px 18px 34px;
+    }
+
+    .contenido-encabezado-principal h1 {
+        font-size: 32px;
+    }
+
+    .contenido-encabezado-principal p {
+        font-size: 13.5px;
+    }
+
+    .linea-principal-admision {
+        margin: 11px auto 13px;
+    }
+
+    .informacion-admision,
+    .requisitos-admision {
+        padding: 44px 0;
+    }
+
+    .encabezado-admision {
+        margin-bottom: 24px;
+    }
+
+    .encabezado-admision h2 {
+        font-size: 26px;
+    }
+
+    .contenido-informacion-admision {
+        gap: 22px;
+    }
+
+    .lista-requisitos-admision {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   CELULAR PEQUEÑO
+   ========================================================= */
+
+@media(max-width:420px) {
+
+    .contenido-encabezado-principal h1 {
+        font-size: 29px;
+    }
+
+    .contenido-encabezado-principal>span {
+        font-size: 11px;
+    }
+
+    .aviso-importante-admision {
+        padding: 18px;
+    }
+
+    .lista-requisitos-admision li {
+        padding: 15px;
+    }
+}

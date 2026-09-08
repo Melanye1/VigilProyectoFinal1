@@ -1,0 +1,353 @@
+/* ==========================================================================
+   ESTILOS PREMIUM: PÁGINA DE MISIÓN, VISIÓN Y VALORES (ESTILO HISTORIA + FIGMA)
+   ========================================================================== */
+
+/* Respetar navegación */
+header nav ul li a {
+  text-transform: none !important;
+}
+
+/* --- BANNER PRINCIPAL (ESTILO COMPATIBLE CON HISTORIA) --- */
+.banner-seccion-mv {
+  position: relative;
+  width: 100%;
+  min-height: clamp(14rem, 30vw, 20rem);
+  background-image: url('../img/imagen_carrusel1.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+.banner-seccion-mv .capa-degradada-mv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 51, 102, 0.85), rgba(0, 120, 201, 0.4));
+  z-index: 1;
+}
+
+.contenido-banner-mv {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 800px;
+}
+
+.contenido-banner-mv h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff !important;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+.linea-decorativa-amarilla-mv {
+  width: 180px;
+  height: 4px;
+  background-color: #FFD23B;
+  /* Amarillo Institucional */
+  margin-bottom: 15px;
+}
+
+.contenido-banner-mv p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* --- CUERPO GENERAL --- */
+.contenedor-principal-mv {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.texto-introductorio-mv {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #475569;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 50px auto;
+}
+
+/* --- BLOQUE HORIZONTAL DE MISIÓN Y VISIÓN (DISEÑO PREMIUM AZUL) --- */
+.seccion-bloques-mv {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.tarjeta-mv-item {
+  flex: 1;
+  /* Fondo degradado azul oscuro institucional */
+  background: linear-gradient(135deg, #002d59 0%, #004c94 100%);
+  border-radius: 18px;
+  padding: 40px 30px;
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente el círculo del icono con el texto */
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+  /* Borde inferior amarillo decorativo sutil */
+  border-bottom: 4px solid #FFD23B;
+  box-shadow: 0 10px 30px rgba(0, 51, 102, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-mv-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 51, 102, 0.25);
+}
+
+/* Círculo blanco con borde amarillo para el Icono */
+.icono-circulo-mv {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 3px solid #FFD23B;
+  /* Borde Amarillo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del icono interno */
+.icono-circulo-mv i {
+  font-size: 38px;
+  color: #003366;
+  /* Azul profundo para el icono */
+}
+
+/* Contenido de texto interno de la tarjeta */
+.info-mv-card {
+  flex: 1;
+}
+
+.info-mv-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  /* Texto del título en blanco */
+  margin: 0 0 6px 0;
+  letter-spacing: 1px;
+}
+
+/* Línea decorativa amarilla debajo de MISIÓN / VISIÓN */
+.linea-decorativa-titulo {
+  width: 45px;
+  height: 3px;
+  background-color: #FFD23B;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.info-mv-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  /* Blanco con leve transparencia para legibilidad */
+  margin: 0;
+  text-align: justify;
+}
+
+/* --- VALORES INSTITUCIONALES (ESTILO MODERNO) --- */
+.subtitulo-centrado-mv {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 45px;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.subtitulo-centrado-mv::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #FFD23B;
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+.cuadrícula-valores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.tarjeta-valor {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tarjeta-valor:hover {
+  transform: translateY(-8px);
+  border-color: #003366;
+  box-shadow: 0 12px 30px rgba(0, 51, 102, 0.1);
+}
+
+.icono-valor-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f4f8;
+  /* Fondo neutro premium */
+  transition: background-color 0.3s ease;
+}
+
+.icono-valor-wrapper i {
+  font-size: 22px;
+  color: #003366;
+  /* Todos los iconos mantienen un elegante azul */
+  transition: color 0.3s ease;
+}
+
+/* Efecto Hover en los iconos */
+.tarjeta-valor:hover .icono-valor-wrapper {
+  background-color: #003366;
+}
+
+.tarjeta-valor:hover .icono-valor-wrapper i {
+  color: #ffffff;
+}
+
+.tarjeta-valor h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #003366;
+  margin: 0 0 10px 0;
+}
+
+.tarjeta-valor p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* --- NUESTRO COMPROMISO (HORIZONTAL PREMIUM) --- */
+.bloque-compromiso-horizontal {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 51, 102, 0.05);
+  align-items: center;
+  border: 1px solid #e2e8f0;
+  margin-top: 50px;
+}
+
+.columna-compromiso-texto {
+  flex: 1.2;
+  padding: 55px;
+}
+
+.columna-compromiso-texto h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #003366;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.columna-compromiso-texto p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.btn-compromiso-accion {
+  display: inline-block;
+  background-color: #003366;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-compromiso-accion:hover {
+  background-color: #002244;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.columna-compromiso-imagen {
+  flex: 1;
+  align-self: stretch;
+}
+
+.columna-compromiso-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- DISPOSITIVOS MÓVILES (RESPONSIVE) --- */
+@media (max-width: 900px) {
+
+  .seccion-bloques-mv,
+  .bloque-compromiso-horizontal {
+    flex-direction: column;
+  }
+
+  .columna-compromiso-imagen {
+    height: 280px;
+    width: 100%;
+  }
+
+  .banner-seccion-mv {
+    height: 240px;
+    padding: 0 5%;
+  }
+
+  .contenido-banner-mv h2 {
+    font-size: 32px;
+  }
+
+  .cuadrícula-valores {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Gestión de Galería - Colegio Enrique Paillardelle</title>
+    <script src="AuthGuard.js"></script>
+    <link rel="stylesheet" href="css/paginaweb.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/galeria_dashboard.css">
+    <link rel="icon" type="image/png" href="img/logo_enriquepaillardelle.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper-dashboard">
+        <aside class="sidebar-dash">
+            <div class="sidebar-brand-dash">
+                <img src="img/logo_enriquepaillardelle.png" alt="Logo del Colegio Enrique Paillardelle">
+            </div>
+
+            <ul class="sidebar-menu-dash">
+                <li><a href="dashboard.html">Panel Principal</a></li>
+                <li><a href="noticias_dashboard.html">Noticias</a></li>
+                <li><a href="galeria_dashboard.html" class="active">Galería</a></li>
+                <li><a href="contacto_formulario_dashboard.html">Formulario de contacto</a></li>
+                <li><a href="comunicados_dashboard.html">Comunicados</a></li>
+                <li><a href="comentarios_dashboard.html">Comentarios</a></li>
+                <li><a href="usuarios_dashboard.html">Usuarios</a></li>
+                <li><a href="dashboard_configuracion.html">Configuración</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content-dash">
+            <header class="header-dash">
+                <h1 class="m-0">I.E. ENRIQUE PAILLARDELLE - PANEL DE ADMINISTRACIÓN</h1>
+
+                <div class="user-profile-dash menu-usuario-wrapper">
+                    <button type="button" class="btn-menu-usuario" id="btnMenuUsuario"
+                        aria-label="Abrir menú de usuario">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150"
+                            alt="Foto del administrador" class="avatar-dash avatar-dashboard-global">
+                        <span class="menu-burger-icon"><i class="bi bi-list"></i></span>
+                    </button>
+
+                    <div class="menu-desplegable-usuario" id="menuUsuario">
+                        <a href="perfil_dashboard.html" class="menu-usuario-item"><i
+                                class="bi bi-person-circle"></i><span>Perfil</span></a>
+                        <a href="dashboard_configuracion.html" class="menu-usuario-item"><i
+                                class="bi bi-gear"></i><span>Configuración</span></a>
+                        <button type="button" class="menu-usuario-item salir" id="btnSalirGlobal"><i
+                                class="bi bi-box-arrow-right"></i><span>Salir</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="dashboard-container-dash galeria-dashboard-container">
+
+                <section class="cabecera-modulo-galeria">
+                    <div class="titulo-modulo-galeria">
+                        <h2>MÓDULO DE GALERÍA</h2>
+                        <div class="linea-modulo-galeria"></div>
+                        <p>Administra las fotografías publicadas en la galería institucional.</p>
+                    </div>
+
+                    <button type="button" class="btn-agregar-foto" id="btnAbrirModalAgregar">
+                        <i class="fa-solid fa-plus"></i>
+                        Agregar fotografía
+                    </button>
+                </section>
+
+                <section class="metricas-galeria-dashboard">
+                    <article class="metrica-galeria total">
+                        <div class="icono-metrica-galeria"><i class="fa-regular fa-images"></i></div>
+                        <div><span>Total de fotografías</span><strong id="totalFotografias">0</strong></div>
+                    </article>
+
+                    <article class="metrica-galeria publicadas">
+                        <div class="icono-metrica-galeria"><i class="fa-solid fa-circle-check"></i></div>
+                        <div><span>Publicadas</span><strong id="totalPublicadas">0</strong></div>
+                    </article>
+
+                    <article class="metrica-galeria ocultas">
+                        <div class="icono-metrica-galeria"><i class="fa-solid fa-eye-slash"></i></div>
+                        <div><span>Ocultas</span><strong id="totalOcultas">0</strong></div>
+                    </article>
+
+                    <article class="metrica-galeria categorias">
+                        <div class="icono-metrica-galeria"><i class="fa-solid fa-layer-group"></i></div>
+                        <div><span>Categorías</span><strong id="totalCategorias">0</strong></div>
+                    </article>
+                </section>
+
+                <section class="herramientas-galeria-dashboard">
+                    <div class="buscador-dashboard-galeria">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="buscarFotoDashboard" placeholder="Buscar fotografía..."
+                            autocomplete="off">
+                    </div>
+
+                    <select id="filtroCategoriaDashboard">
+                        <option value="todas">Todas las categorías</option>
+                        <option value="actividades">Actividades</option>
+                        <option value="aniversario">Aniversario</option>
+                        <option value="deportes">Deportes</option>
+                        <option value="ferias">Ferias</option>
+                        <option value="ceremonias">Ceremonias</option>
+                    </select>
+
+                    <select id="filtroEstadoDashboard">
+                        <option value="todos">Todos los estados</option>
+                        <option value="publicada">Publicadas</option>
+                        <option value="oculta">Ocultas</option>
+                    </select>
+                </section>
+
+                <section class="grid-galeria-dashboard" id="gridGaleriaDashboard"></section>
+
+                <div class="estado-vacio-galeria-dashboard" id="estadoVacioGaleria">
+                    <i class="fa-regular fa-images"></i>
+                    <h3>No se encontraron fotografías</h3>
+                    <p>Prueba con otros filtros o agrega una nueva fotografía.</p>
+                </div>
+
+                <nav class="paginacion-dashboard-galeria" id="paginacionGaleriaDashboard" aria-label="Paginación"></nav>
+            </main>
+        </div>
+    </div>
+
+    <div class="modal-galeria-overlay" id="modalGaleriaOverlay" aria-hidden="true">
+        <div class="modal-galeria-box">
+            <div class="modal-galeria-header">
+                <div>
+                    <span id="modalSubtitulo">Nueva fotografía</span>
+                    <h3 id="modalTitulo">Agregar fotografía</h3>
+                </div>
+
+                <button type="button" class="cerrar-modal-galeria" id="btnCerrarModalGaleria" aria-label="Cerrar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+<form id="formGaleriaDashboard">
+    <!-- El ID fotoId es correcto, añade name="id" -->
+    <input type="hidden" id="fotoId" name="id">
+
+    <div class="campo-galeria">
+        <label for="tituloFoto">Título</label>
+        <input type="text" id="tituloFoto" name="titulo" maxlength="100" required>
+    </div>
+
+    <div class="fila-campos-galeria">
+        <div class="campo-galeria">
+            <label for="categoriaFoto">Categoría</label>
+            <select id="categoriaFoto" name="categoria" required>
+                <option value="">Seleccionar</option>
+                <option value="actividades">Actividades</option>
+                <option value="aniversario">Aniversario</option>
+                <option value="deportes">Deportes</option>
+                <option value="ferias">Ferias</option>
+                <option value="ceremonias">Ceremonias</option>
+            </select>
+        </div>
+
+        <div class="campo-galeria">
+            <label for="fechaFoto">Fecha</label>
+            <input type="date" id="fechaFoto" name="fecha" required>
+        </div>
+    </div>
+
+    <div class="campo-galeria">
+        <label for="descripcionFoto">Descripción</label>
+        <textarea id="descripcionFoto" name="descripcion" rows="3" maxlength="250"></textarea>
+    </div>
+
+    <div class="campo-galeria">
+        <label>Imagen de la fotografía</label>
+        <label for="imagenFoto" class="selector-imagen-galeria" id="selectorImagenGaleria">
+            <!-- Asegúrate de poner name="imagen" -->
+            <input type="file" id="imagenFoto" name="imagen" accept="image/jpeg,image/png,image/webp" hidden>
+            <!-- ... resto del contenido ... -->
+        </label>
+    </div>
+
+    <div class="campo-galeria">
+        <label for="estadoFoto">Estado</label>
+        <select id="estadoFoto" name="estado" required>
+            <option value="publicada">Publicada</option>
+            <option value="oculta">Oculta</option>
+        </select>
+    </div>
+   <div class="acciones-modal-galeria">
+       <button type="button" class="btn-modal-galeria cancelar" id="btnCancelarModalGaleria">Cancelar</button>
+       <button type="submit" class="btn-modal-galeria guardar">
+            <i class="fa-solid fa-floppy-disk"></i> Guardar fotografía
+        </button>
+    </div>
+</form> <!-- AHORA SÍ SE CIERRA EL FORMULARIO AQUÍ -->
+        </div>
+    </div>
+
+    <div class="confirmacion-galeria-overlay" id="confirmacionGaleriaOverlay" aria-hidden="true">
+        <div class="confirmacion-galeria-box">
+            <div class="icono-confirmacion-galeria"><i class="fa-regular fa-trash-can"></i></div>
+            <h3>Eliminar fotografía</h3>
+            <p>¿Está seguro de que desea eliminar esta fotografía? Esta acción no se puede deshacer.</p>
+
+            <div class="acciones-confirmacion-galeria">
+                <button type="button" class="btn-confirmacion-galeria cancelar"
+                    id="btnCancelarEliminarFoto">Cancelar</button>
+                <button type="button" class="btn-confirmacion-galeria eliminar"
+                    id="btnConfirmarEliminarFoto">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js/galeriaDA.js"></script>
+    <script src="script.js/dashboard/Menu_usuario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

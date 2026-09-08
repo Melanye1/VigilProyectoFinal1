@@ -1,0 +1,368 @@
+/* =========================================================
+   VARIABLES Y ESTILOS BASE (Mantenidos del ecosistema)
+   ========================================================= */
+:root {
+    --azul: #003366;
+    --azul-oscuro: #002855;
+    --azul-claro: #0078c9;
+    --amarillo: #ffcc00;
+    --texto: #26364a;
+    --texto-suave: #64748b;
+    --borde: #d8e2ec;
+    --fondo: #f5f8fc;
+    --blanco: #fff;
+}
+
+.contenedor-admision {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* Encabezados de secciones comunes */
+.encabezado-admision {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 0 28px;
+    text-align: left;
+}
+
+.encabezado-admision>span,
+.texto-matricula-digital>span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--azul-claro);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.encabezado-admision h2,
+.texto-matricula-digital h2 {
+    margin: 0;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.linea-admision {
+    width: 68px;
+    height: 4px;
+    margin: 12px 0 17px;
+    border-radius: 20px;
+    background: var(--amarillo);
+}
+
+.encabezado-admision>p {
+    max-width: 760px;
+    margin: 0;
+    color: var(--texto-suave);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   SECCIÓN: PASOS GENERALES (PROCESO)
+   ========================================================= */
+.proceso-admision {
+    padding: 56px 0;
+    background: #fff;
+}
+
+.linea-proceso-admision {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.paso-admision {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    padding: 22px 18px 20px;
+    border-top: 4px solid var(--azul-claro);
+    background: #f8fbfe;
+}
+
+.numero-paso-admision {
+    position: absolute;
+    top: -15px;
+    left: 17px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.contenido-paso-admision {
+    padding-top: 9px;
+}
+
+.contenido-paso-admision>i {
+    margin-bottom: 13px;
+    color: var(--azul-claro);
+    font-size: 25px;
+}
+
+.contenido-paso-admision h3 {
+    margin: 0 0 8px;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.contenido-paso-admision p {
+    margin: 0;
+    color: #526273;
+    font-family: "Poppins", sans-serif;
+    font-size: 12.5px;
+    line-height: 1.6;
+}
+
+.separador-paso-admision {
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9aabb9;
+}
+
+/* =========================================================
+   SECCIÓN: MATRÍCULA DIGITAL
+   ========================================================= */
+.matricula-digital-admision {
+    padding: 48px 0;
+    background: var(--azul);
+}
+
+.bloque-matricula-digital {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 170px;
+    gap: 35px;
+    align-items: center;
+}
+
+.texto-matricula-digital>span {
+    color: var(--amarillo);
+}
+
+.texto-matricula-digital h2 {
+    color: #fff;
+}
+
+.texto-matricula-digital .linea-admision {
+    background: var(--amarillo);
+}
+
+.texto-matricula-digital p {
+    max-width: 720px;
+    margin: 0 0 22px;
+    color: rgba(255, 255, 255, .88);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.btn-matricula-digital {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 43px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: var(--amarillo);
+    color: var(--azul-oscuro);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn-matricula-digital:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 17px rgba(0, 0, 0, .18);
+}
+
+.icono-grande-matricula {
+    width: 130px;
+    height: 130px;
+    margin-left: auto;
+    border: 2px solid rgba(255, 255, 255, .28);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+/* =========================================================
+   SECCIÓN: PREGUNTAS FRECUENTES (FAQ)
+   ========================================================= */
+.consultas-admision {
+    padding: 56px 0 62px;
+    background: #fff;
+}
+
+.lista-faq-admision {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.item-faq-admision {
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+    background: #fff;
+    overflow: hidden;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.item-faq-admision.activo {
+    border-color: #9fc7e7;
+    box-shadow: 0 6px 17px rgba(0, 51, 102, .06);
+}
+
+.pregunta-faq-admision {
+    width: 100%;
+    min-height: 70px;
+    padding: 14px 19px;
+    border: none;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.icono-faq-admision {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    background: #eaf4fc;
+    color: var(--azul-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.texto-pregunta-faq {
+    flex: 1;
+    color: var(--azul);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.flecha-faq-admision {
+    color: #8495a5;
+    font-size: 14px;
+    transition: transform .25s ease;
+}
+
+.item-faq-admision.activo .flecha-faq-admision {
+    transform: rotate(180deg);
+}
+
+.respuesta-faq-admision {
+    display: none;
+    padding: 0 72px 18px;
+}
+
+.item-faq-admision.activo .respuesta-faq-admision {
+    display: block;
+}
+
+.respuesta-faq-admision p {
+    margin: 0;
+    padding-top: 3px;
+    color: #526273;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUTS (TABLET & MOVIL)
+   ========================================================= */
+@media(max-width:900px) {
+    .linea-proceso-admision {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .separador-paso-admision {
+        display: none;
+    }
+
+    .bloque-matricula-digital {
+        grid-template-columns: 1fr 120px;
+    }
+
+    .icono-grande-matricula {
+        width: 105px;
+        height: 105px;
+        font-size: 38px;
+    }
+}
+
+@media(max-width:680px) {
+    .contenedor-admision {
+        width: calc(100% - 30px);
+    }
+
+    .encabezado-admision h2,
+    .texto-matricula-digital h2 {
+        font-size: 26px;
+    }
+
+    .linea-proceso-admision {
+        grid-template-columns: 1fr;
+    }
+
+    .paso-admision {
+        min-height: auto;
+    }
+
+    .icono-grande-matricula {
+        display: none;
+    }
+
+    .pregunta-faq-admision {
+        min-height: 64px;
+        padding: 12px 14px;
+    }
+
+    .texto-pregunta-faq {
+        font-size: 13.5px;
+    }
+
+    .respuesta-faq-admision {
+        padding: 0 15px 16px;
+    }
+}
+
+@media(max-width:420px) {
+    .icono-faq-admision {
+        width: 34px;
+        height: 34px;
+    }
+}

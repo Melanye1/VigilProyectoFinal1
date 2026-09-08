@@ -1,0 +1,11 @@
+/* Fila inactiva */
+.usuario-item-row.usuario-inactivo .usuario-texto-box {
+    background-color: #e0e0e0 !important; /* Gris */
+    color: #777;
+}
+
+/* Estilos de botones */
+.btn-accion-icon { border: 1px solid #d1e7dd; background: #f8fff9; padding: 5px 10px; border-radius: 4px; }
+.btn-accion-icon.verde-claro { color: #198754; }
+.btn-accion-icon.rojo { color: #dc3545; }
+.btn-accion-icon.gris { background: #ccc; color: white; }
